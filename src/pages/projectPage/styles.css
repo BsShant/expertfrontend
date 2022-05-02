@@ -1,0 +1,70 @@
+.project-page-container {
+  min-height: 100vh;
+  background: #2b9123;
+  padding: 60px 0;
+}
+.project-page-inner-container {
+}
+
+.project-page-image-container {
+    margin-bottom: 30px;
+}
+.project-page-image-container img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 5/3;
+}
+.project-page-text {
+  color: white;
+}
+.project-category {
+  font-size: 14px;
+  color: white;
+}
+.project-title {
+  color: white;
+  font-size: 28px;
+}
+.progress-container {
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+.support-container {
+}
+
+.progress-container .funding-raised-left {
+  text-decoration: none !important;
+  color: white;
+}
+.progress-container .funding-raised-right {
+  text-decoration: none !important;
+  color: white;
+}
+.progress-container .funding-collected {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  text-decoration: none !important;
+}
+.progress-container .funding-bar {
+  height: 6px;
+  background: white;
+  border-radius: 20px;
+  border: 0.5px solid #fff;
+}
+.progress-container .days-left {
+  font-size: 14px;
+  padding: 5px 10px;
+  background-color: white;
+  text-decoration: none !important;
+}
+.progress-container .days-left {
+  background: transparent;
+  color: white;
+  padding-left: 0;
+}
+
+
+.people-supported{
+  color: white;
+}

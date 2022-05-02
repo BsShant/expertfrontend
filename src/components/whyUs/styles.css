@@ -1,0 +1,98 @@
+.small-services-outer-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 10px 0 30px;
+  background: url(../../assets/images/clientBackground.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 768px) {
+  .small-services-outer-container {
+    padding: 10px 0 60px;
+  }
+}
+.service-box-inner-container {
+}
+.small-service-box {
+  /* background-color: #2b9123; */
+  background-color: white;
+  flex-direction: column;
+  border-radius: 10px;
+  margin: auto;
+  box-shadow: 1px 1px 8px 1px grey;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+  height: 156px;
+  width: 260px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.small-service-box-margin {
+  margin-bottom: 30px;
+}
+.small-service-box:hover {
+  /* background-color: white; */
+  background-color: grey;
+}
+.small-service-box:hover .small-service-heading {
+  /* color: black; */
+  color: white;
+}
+.small-service-box:hover .small-service-paragraph {
+  color: black;
+}
+.small-service-box:hover .small-service-icon svg {
+  /* color: #2b9123; */
+  color: white;
+}
+.small-service-icon {
+  height: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.small-service-icon svg {
+  /* color: white; */
+  color: grey;
+  font-size: 45px;
+}
+.small-service-body {
+  color: white;
+  padding: 0px 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+.small-service-heading {
+  /* color: white; */
+  color: grey;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.small-service-paragraph {
+}
+
+.small-service-info {
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 65px;
+}
+.small-service-top-title {
+  /* color: #2b9123; */
+  color: grey;
+}
+.small-service-info-heading {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  /* border-bottom: 1px solid #2b9123; */
+}
+.small-service-info-paragraph {
+  margin-bottom: 10px;
+  text-align: center;
+}

@@ -1,0 +1,46 @@
+.service-inner-page-container {
+  min-height: 100vh;
+  background: #2b9123;
+  padding: 60px 0;
+}
+.service-inner-page-inner-container {
+}
+
+.service-inner-page-image-container {
+  margin-bottom: 30px;
+}
+.service-inner-page-image-container img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 5/3;
+}
+.service-inner-page-text {
+  color: white;
+}
+.service-inner-page-heading {
+  font-size: 28px;
+  color: white;
+}
+.service-price {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.keypoints-container {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.key-points-title {
+  font-size: 18px;
+  color: white;
+}
+.key-points-list {
+}
+.key-point-list-item {
+  color: white;
+}
+.service-inner-page-about-heading {
+  color: white;
+  font-size: 18px;
+}

@@ -1,0 +1,90 @@
+.category-layout-inner {
+  display: flex;
+}
+.sider-layout {
+  position: fixed;
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 66px 0 20px;
+  background-color: white;
+  z-index: 10;
+  scrollbar-width: 5px
+
+}
+.sider-layout::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .sider-layout::-webkit-scrollbar-track {
+    background: rgb(179, 177, 177);
+    border-radius: 10px;
+  }
+  
+  .sider-layout::-webkit-scrollbar-thumb {
+    background: rgb(136, 136, 136);
+    border-radius: 10px;
+  }
+  
+  .sider-layout::-webkit-scrollbar-thumb:hover {
+    background: rgb(100, 100, 100);
+    border-radius: 10px;
+  }
+  
+  .sider-layout::-webkit-scrollbar-thumb:active {
+    background: rgb(68, 68, 68);
+    border-radius: 10px;
+  }
+/* html::-webkit-scrollbar {
+    width: 10px;
+  }
+
+html::-webkit-scrollbar-track {
+    background: rgb(179, 177, 177);
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: rgb(136, 136, 136);
+    border-radius: 10px;
+  }
+
+html::-webkit-scrollbar-thumb:hover {
+    background: rgb(100, 100, 100);
+    border-radius: 10px;
+  }
+
+html::-webkit-scrollbar-thumb:active {
+    background: rgb(68, 68, 68);
+    border-radius: 10px;
+  }
+  .sider-layout {
+    scrollbar-width: 10px
+  }
+  .sider-layout {
+    scrollbar-color: rgb(68, 68, 68) rgb(68, 68, 68);
+
+} */
+.category-body {
+}
+.sider-layout-mobile{
+    display: none;
+    padding: 66px 0 20px;
+    position: fixed;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: white;
+    z-index: 10;
+
+}
+
+@media  (max-width: 992px) {
+    .sider-layout-mobile{
+      display: block;
+    }
+    .sider-layout{
+      display: none;
+    }
+    .category-body{
+        width: 100%!important;
+    }
+  }

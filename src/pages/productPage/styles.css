@@ -1,0 +1,21 @@
+.products-page-container {
+  min-height: 100vh;
+  background: #2b9123;
+  padding: 30px 0;
+  color: white;
+  text-align: center;
+}
+
+.products-page-heading {
+  text-align: center;
+}
+.products-page-container .page-header {
+  font-size: 28px;
+  color: white;
+  margin-bottom: 40px;
+}
+.product-margin-bottom{
+    margin-bottom: 30px;
+}
+
+

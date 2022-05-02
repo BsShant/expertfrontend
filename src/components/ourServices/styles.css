@@ -1,0 +1,31 @@
+.services-container {
+  min-height: 100vh;
+  padding: 40px 0 30px;
+  /* background-color: #2b9123; */
+  display: flex;
+  align-items: center;
+}
+.services-inner-container {
+}
+
+.services-container .heading-container {
+  text-align: center;
+}
+.services-container .top-title {
+  font-size: 16px;
+  /* color: white; */
+  text-align: center;
+}
+.services-container .heading {
+  /* color: white; */
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.services-container .para {
+  /* color: white; */
+  margin-bottom: 50px;
+}
+
+.our-services-margin-bottom{
+  margin-bottom: 30px;
+}

@@ -1,0 +1,32 @@
+.our-products-container {
+  
+  padding: 20px 0 30px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  /* background: #2b9123; */
+  color: black;
+}
+.our-products-inner-container {
+  text-align: center;
+}
+
+.our-products-inner-container .top-title {
+  font-size: 16px;
+  color: black;
+  text-align: center;
+}
+
+.our-products-inner-container .detail {
+  margin-bottom: 50px;
+}
+
+.our-products-inner-container .heading {
+  color: black;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.products-margin{
+  margin-bottom: 30px;
+}

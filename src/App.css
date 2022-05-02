@@ -6,6 +6,11 @@
   height: 40vmin;
   pointer-events: none;
 }
+.blue {
+  background-color: blue;
+  height: 400px;
+  width: 100%;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -25,7 +30,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #0991be;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +40,208 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  /* font-family: "Nexa Regular" !important; */
+  /* font-family: 'Roboto', sans-serif !important; */
+}
+
+.primary-button {
+  background: transparent!important;
+  color: #0991be!important;
+  height: 45px!important;
+  width: 120px!important;
+  cursor: pointer!important;
+  border: #0991be 2px solid!important;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  transition: all 500ms ease-in-out;
+
+}
+.primary-button:hover{
+  background: #0991be!important;
+  color: white!important;
+  height: 45px!important;
+  width: 120px!important;
+  cursor: pointer!important;
+  border: solid 2px #6acfca!important;
+}
+.alternate-button {
+  background: transparent!important;
+  border: none;
+  color: white;
+  height: 45px!important;
+  width: 120px!important;
+  cursor: pointer;
+  transition: all 250ms linear;
+  border: 2px solid white!important;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  transition: all 500ms ease-in-out;
+
+  /* border: black 1px solid; */
+}
+.alternate-button:hover{
+  background-color: white!important;
+  color: #0991be!important;
+  border: 2px solid white!important;
+
+}
+
+
+/* html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: rgb(179, 177, 177);
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: rgb(136, 136, 136);
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: rgb(100, 100, 100);
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:active {
+  background: rgb(68, 68, 68);
+  border-radius: 10px;
+} */
+
+
+.ant-menu-item.ant-menu-item-only-child:hover .cursor{
+  background-color: gray!important;
+  
+}
+
+.alternate-button:hover .cursor{
+  background-color: pink!important;
+  transform: scale(1.1);
+}
+
+
+
+/* button */
+.btn-flip {
+  opacity: 1;
+  outline: 0;
+  color: #fff;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  letter-spacing: 1px;
+  display: inline-block;
+  font-family: nova-light;
+  text-transform: uppercase;
+  text-decoration: none !important;
+}
+
+.btn-flip:hover:after {
+  opacity: 1;
+  -webkit-transform: translateY(0) rotateX(0);
+          transform: translateY(0) rotateX(0);
+}
+
+.btn-flip:hover:before {
+  opacity: 0;
+  -webkit-transform: translateY(50%) rotateX(90deg);
+          transform: translateY(50%) rotateX(90deg);
+}
+
+.btn-flip:after {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  color: white;
+  display: block;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  position: absolute;
+  background: black;
+  content: attr(data-back);
+  -webkit-transform: translateY(-50%) rotateX(90deg);
+          transform: translateY(-50%) rotateX(90deg);
+  padding: 8px 30px;
+}
+
+.btn-flip:before {
+  top: 0;
+  left: 0;
+  opacity: 1;
+  color: white;
+  display: block;
+  padding: 8px 30px;
+  line-height: 40px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  position: relative;
+  background: #0991be;
+  content: attr(data-front);
+  -webkit-transform: translateY(0) rotateX(0);
+          transform: translateY(0) rotateX(0);
+}
+
+@media only screen and (max-width: 768px) {
+  .btn-flip:after, .btn-flip:before {
+    font-size: 14px;
+    padding: 5px 25px;
+  }
+}
+
+
+/* owl carousel */
+.owl-carousel .owl-dots .owl-dot {
+  background: white;
+  border: 1px solid #0991be !important;
+  width: 10px;
+  height: 10px;
+  margin-right: 15px;
+}
+
+.owl-carousel .owl-dots .owl-dot.active {
+  background: #0991be;
+}
+
+.owl-carousel .owl-dots .owl-dot:focus {
+  border: 1px solid #0991be !important;
+  outline: none;
+}
+
+/* section */
+.section {
+  position: relative;
+}
+
+.section .section-title {
+  position: absolute;
+  color: rgba(17, 17, 17, 0.06);
+  left: 8%;
+  top: 25%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.section .section-title h1 {
+  font-size: 130px !important;
+  line-height: 0;
+  color: rgba(17, 17, 17, 0.06);
+  text-orientation: sideways;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  font-family: nova-bold;
 }

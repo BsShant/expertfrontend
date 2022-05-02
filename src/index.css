@@ -1,13 +1,56 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* width: 100vw!important;
+  overflow-x: hidden!important; */
+}
+html{
+  width: 100vw!important;
+  overflow-x: hidden!important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+@font-face {
+  font-family: 'Nexa Bold';
+  src: local('Nexa Bold'), url('./assets/fonts/Nexa\ Bold.otf') format('opentype')
+}
+@font-face {
+  font-family: 'Nexa Light';
+  src: local('Nexa Light'), url('./assets/fonts/Nexa\ Light.otf') format('opentype')
+}
+@font-face {
+  font-family: 'Nexa Regular';
+  src: local('Nexa Regular'), url('./assets/fonts/Nexa\ Regular.otf') format('opentype')
+}
+@font-face {
+  font-family: nova-light;
+  src: url("./assets/fonts/Proxima-Nova-Alt-Light.otf");
+}
+
+@font-face {
+  font-family: nova-bold;
+  src: url("./assets/fonts/Proxima-Nova-Alt-Bold.otf");
+}
+
+@font-face {
+  font-family: nova-thin;
+  src: url("./assets/fonts/Proxima-Nova-Alt-Thin.otf");
+}
+
+body {
+  font-family: nova-light;
+}
+
+p {
+  font-family: nova-light;
+}
+
+
+
+.tech-container .owl-theme .owl-dots .owl-dot span{
+  display: none;
 }

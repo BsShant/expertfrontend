@@ -1,0 +1,12 @@
+.products-new-container {
+}
+.products-new-container img {
+  height: 100px;
+  width: 100px!important;
+  opacity: 0.5;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
+.products-new-container img:hover{
+    opacity: 1;
+}

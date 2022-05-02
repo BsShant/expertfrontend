@@ -1,0 +1,27 @@
+.testimonial-container {
+  min-height: 100vh;
+  display: flex;
+  padding: 30px 0;
+  align-items: center;
+}
+.testimonial-container .owl-dots{
+  margin-top: 25px;
+}
+.testimonial-inner-container {
+}
+.testominal-headings {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.testominal-headings .top-title {
+  font-size: 16px;
+  color: grey;
+  text-align: center;
+}
+.testominal-headings .heading {
+  color: #2b9123;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+.testominal-headings .details {
+}

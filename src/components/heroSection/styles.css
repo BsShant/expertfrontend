@@ -1,0 +1,128 @@
+.hero-container {
+  min-height: calc(100vh - 80px);
+  position: relative;
+  z-index: 1;
+  /* background: url(../../assets/images/clientBackground.webp); */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+}
+.hero-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background:rgba(0, 0, 0, 0.4); */
+  z-index: -1;
+}
+.hero-text-container {
+  /* color: white; */
+  /* color: white; */
+  padding: 50px 0px;
+}
+.hero-inner-container {
+  min-height: calc(100vh - 80px);
+  padding: 0px 0 27px;
+  display: flex;
+  align-items: center;
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.hero-title {
+  text-transform: capitalize;
+  padding-right: 20px;
+  /* color: #fff; */
+  font-weight: bolder;
+  font-size: 40px;
+}
+.hero-detail {
+  /* color: white; */
+}
+.button-section {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+}
+.button-section div:not(:last-child) {
+  margin-right: 10px;
+}
+/* .register-button-container button {
+  background: #2b9123;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 25px;
+  border: none;
+} */
+.follow-us-text {
+}
+
+.hero-section-image {
+  height: 100%;
+}
+
+.hero-section-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+@media (min-width: 448px) {
+  .hero-text {
+    /* margin-top: 150px; */
+  }
+}
+
+@media (max-width: 448px) {
+  .hero-text {
+    /* margin-top: 100px; */
+    text-align: center;
+  }
+  .button-section {
+    justify-content: center;
+  }
+}
+
+.globe-earth {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 50px;
+}
+
+.globe-earth canvas {
+  outline: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .globe-earth {
+    left: 0;
+    width: 700px;
+  }
+  .globe-container {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    z-index: -1;
+  }
+}
+@keyframes globerotate {
+  from{
+    transform: translate3d(0px, 0px, 0px);
+  }
+  to{
+    transform: translate3d(0px, 0px, 5px);
+  }
+  
+}
+.earth-container img {
+  width: 435px;
+  max-width: 100%;
+  animation: globerotate 250ms ease-in-out  infinite alternate ;
+}
+

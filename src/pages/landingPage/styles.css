@@ -1,0 +1,46 @@
+.choose-outer-container {
+  padding: 60px 0 60px 0;
+  align-items: center;
+  display: flex;
+  overflow-x: hidden;
+}
+.choose-inner-container {
+}
+.choose-heading-section {
+  text-align: center;
+}
+.choose-heading-section .top-title {
+  font-size: 16px;
+  color: grey;
+  text-align: center;
+}
+.choose-heading-section .heading {
+  color: #2b9123;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.choose-heading-section .para {
+  margin-bottom: 40px;
+}
+
+
+
+html{
+  /* scroll-snap-type: mandatory; */
+  /* overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+  scroll-snap-points-y: repeat(100vh); */
+  /* -ms-overflow-style: none; IE and Edge */
+  /* scrollbar-width: none; Firefox */
+  /* height: 100vh;
+  width: 100vw!important;
+  overflow-x: hidden!important; */
+}
+/* .bruhh::-webkit-scrollbar {
+  display: none;
+}
+
+.snap-y{
+  scroll-snap-align: start;
+} */

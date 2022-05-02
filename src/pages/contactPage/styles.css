@@ -1,0 +1,38 @@
+.contact-page-container {
+  min-height: 100vh;
+  padding: 30px 0;
+  background-color: #2b9123;
+}
+.contact-page-container .ant-form-item-required {
+  color: white !important;
+}
+.contact-page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.contact-page-header .heading {
+    color: white;
+    font-size: 28px;
+}
+
+.contact-form-margin{
+    margin: auto;
+}
+.contact-page-container #basic_message:focus{
+    border-color: #2b9123!important;
+}
+.contact-page-container .ant-input:focus{
+    border-color: #2b9123!important;
+
+}
+.contact-page-container .ant-form-item-explain-error {
+    color: white;
+    margin-bottom: 15px;
+  }
+  .ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before{
+      display: none;
+  }
+  .contact-form-button-container  .ant-form-item-control-input-content{
+      display: flex;
+      justify-content: flex-end;
+  }

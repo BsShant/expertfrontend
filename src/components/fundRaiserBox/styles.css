@@ -1,0 +1,81 @@
+.fund-raiser-box {
+  cursor: pointer;
+  text-decoration: none !important;
+  box-shadow: 1px 1px 2px 1px white;
+}
+.fund-raiser-box-link {
+  text-decoration: none;
+  color: black;
+}
+.fund-raiser-box-link:hover {
+  color: black;
+}
+.fund-raiser-box:hover {
+  box-shadow: 1px 1px 8px 1px white;
+}
+.fund-raiser-image {
+  width: 100%;
+}
+.fund-raiser-image img {
+  width: 100%;
+  aspect-ratio: 5/3;
+  object-fit: cover;
+}
+.fund-raiser-description {
+  font-size: 14px;
+  padding: 5px 10px 0;
+  /* background-color: white; */
+  text-decoration: none !important;
+  color: white;
+}
+.fund-raiser-type {
+  font-size: 14px;
+  color: white;
+}
+.fund-raiser-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-decoration: none !important;
+  height: 45px;
+}
+.fund-raiser-info {
+  text-decoration: none !important;
+}
+.funding-section {
+  font-size: 14px;
+  padding: 8px 10px 0;
+  color: white;
+  /* background-color: white; */
+}
+.funding-raised-left {
+  text-decoration: none !important;
+}
+.funding-raised-right {
+  text-decoration: none !important;
+}
+.funding-collected {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  text-decoration: none !important;
+}
+.funding-bar {
+  height: 6px;
+  /* background: #2b9123; */
+  border-radius: 20px;
+  background-color: white;
+  border: 0.5px solid #fff;
+}
+.days-left {
+  font-size: 14px;
+  padding: 5px 10px;
+  /* background-color: white; */
+  color: white;
+  text-decoration: none !important;
+}
+.funding-inner-bar{
+    background-color: #2b9123;
+    width: 80%;
+    height: 100%;
+
+}

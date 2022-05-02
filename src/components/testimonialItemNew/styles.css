@@ -1,0 +1,125 @@
+.testimonial-itemcontainer {
+}
+.testimonial-text {
+  background: #ccc;
+  background: #2b9123;
+  color: white;
+  height: 330px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 50px;
+  border-radius: 60px;
+}
+.testimonial-user {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  justify-content: center;
+}
+.testimonial-image {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.testimonial-image img {
+  width: 100%;
+  height: 100%;
+}
+.testimonial-user-info {
+  margin-left: 20px;
+}
+.testimonial-user-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+.testimonial-user-company {
+  font-size: 14px;
+}
+
+.testimonial-arrow {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 25px solid #2b9123;
+  position: absolute;
+  left: 45%;
+}
+
+.new-test {
+  height: 340px;
+  display: flex;
+  width: 100%;
+}
+.new-test-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid green;
+}
+.new-test-image img {
+  width: 120px !important;
+  height: 120px !important;
+  object-fit: cover;
+}
+.test-text-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: transparent;
+  margin-left: -45px;
+  height: 100%;
+}
+.test-text-info {
+  background: white;
+  padding-bottom: 20px;
+}
+.test-user-name {
+  background: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+.testuser-role {
+  background: white;
+  color: green;
+}
+
+@media (max-width: 768px) {
+  .new-test-image {
+    width: 140px !important;
+    height: 137px !important;
+    margin: auto !important;
+    padding: 10px;
+  }
+  .test-text-detail {
+    margin-left: 0px;
+    text-align: center;
+  }
+  .test-width{
+    width: 100%!important;
+  }
+}
+
+
+.testmonial-alternate{
+  color: white!important;
+  background-color: #2b9123!important;
+  border-color: #fff!important;
+}
+.test-width{
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width:992px) {
+  .test-width{
+    width: 100%!important;
+  }
+  
+}

@@ -1,0 +1,33 @@
+.category-sider {
+  overflow: auto;
+  overflow-x: hidden;
+  /* height: 100vh!important;
+        position: fixed;
+        left: 0; */
+  /* padding-bottom: 70px; */
+}
+.category-sider .ant-layout-sider {
+  background: white;
+  padding: 0 0px;
+}
+.sider-header{
+    padding: 30px 20px 10px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.category-sider .ant-menu-title-content{
+    padding: 0 20px;
+}
+.category-sider .ant-menu-light .ant-menu-item:hover{
+    color: green;
+}
+.category-sider .ant-menu-item.ant-menu-item-selected.ant-menu-item-only-child{
+    color: green;
+}
+
+.category-sider .ant-layout-sider.ant-layout-sider-dark.categoriesSider{
+  width: 100%!important;
+  min-width: 100%!important;
+  max-width: 100%!important;
+}
