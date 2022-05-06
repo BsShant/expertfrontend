@@ -43,6 +43,7 @@ code {
 
 body {
   font-family: nova-light;
+  /* overflow: hidden!important; */
 }
 
 p {

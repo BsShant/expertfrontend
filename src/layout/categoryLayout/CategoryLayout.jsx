@@ -6,26 +6,26 @@ import Header from '../../components/header/Header'
 import { useSelector } from 'react-redux'
 import './styles.css'
 import CategoriesSiderMobile from '../../components/categoriesSiderMobile/CategoriesSiderMobile'
+import EasyFooter from '../../components/easyFooter/EasyFooter'
+import ServicePageMobile from '../../pages/serviceMobilePage/ServicePage'
 const CategoryLayout = (props) => {
     const categoryCollapse = useSelector(state => state.categoryStore.categoryCollapse)
     const categoryMobileCollapse = useSelector(state => state.categoryStore.categoryMobileCollapse)
     return (
         <div>
             <Header />
-            <div className="category-layout-inner">
-                <div className='sider-layout'  style={{width:`${categoryCollapse? "0%" :"20%"}`}}>
-                    <CategoriesSider />
-                </div>
-                <div className='sider-layout-mobile'  style={{width:`${categoryMobileCollapse? "0%" :"38%"}`}}>
-                    <CategoriesSiderMobile />
-                </div>
-                <div className="category-body"  style={{width:`${categoryCollapse? "100%" :"80%"}` , marginLeft:`auto`}}>
-                    {props.children}
-                    <FooterSection />
-                    {/* <Bottom /> */}
-                </div>
+
+
+            <div className="category-body">
+                {props.children}
+                <EasyFooter />
+            </div>
+            <div className="category-body-mobile">
+                <ServicePageMobile />
+                <EasyFooter />
 
             </div>
+
         </div>
     )
 }

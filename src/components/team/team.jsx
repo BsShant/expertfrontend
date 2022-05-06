@@ -64,7 +64,7 @@ const EasyTeam = () => {
                         <div class="col-sm-12 col-md-4">
                             <a href="#">
                                 <div class="team-card">
-                                    <img src={Team3} alt="" width="100%" />
+                                    <img src={Team1} alt="" width="100%" />
                                     <div class="team-card-overlay">
                                         <div class="overlay-content">
                                             <div class="team-info">

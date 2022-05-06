@@ -18,7 +18,9 @@ const OurProductsNew = (props) => {
             <div className="container">
                 <div className="our-products-new-inner-container">
                     <ReactOwlCarousel className='owl-theme' loop={true} nav={false}
-                        margin={30} dots={false} slideTransition='linear' autoplaySpeed={6000} smartSpeed={6000} center={true} autoPlay={true} items={1} nav={false}
+                        margin={30} dots={false} slideTransition='linear'
+                        autoplaySpeed={6000} smartSpeed={6000}
+                        center={true} autoPlay={true} items={1}
                         responsiveClass={true} responsive={{
                             0: {
                                 items: 4,

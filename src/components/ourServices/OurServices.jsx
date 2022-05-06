@@ -15,7 +15,6 @@ import Registration from '../../assets/images/registration.jpg'
 import Consulting from '../../assets/images/consulting.jpg';
 import Finance from '../../assets/images/finance.jpg'
 import Accounting from '../../assets/images/accounting.avif'
-
 const OurServices = (props) => {
     const {naa} = props
     return (

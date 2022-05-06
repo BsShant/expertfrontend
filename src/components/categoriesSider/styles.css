@@ -1,6 +1,9 @@
 .category-sider {
   overflow: auto;
   overflow-x: hidden;
+  min-height: 100vh;
+  margin-top: 6px;
+  width: 200px;
   /* height: 100vh!important;
         position: fixed;
         left: 0; */
@@ -10,24 +13,24 @@
   background: white;
   padding: 0 0px;
 }
-.sider-header{
-    padding: 30px 20px 10px;
-    font-weight: bold;
-    font-size: 24px;
+.sider-header {
+  padding: 30px 0px 10px!important;
+  font-weight: bold;
+  font-size: 24px;
 }
 
-.category-sider .ant-menu-title-content{
-    padding: 0 20px;
+.category-sider .ant-menu-title-content {
+  padding: 0 0px!important;
 }
-.category-sider .ant-menu-light .ant-menu-item:hover{
-    color: green;
+.category-sider .ant-menu-light .ant-menu-item:hover {
+  color: #0991be;
 }
-.category-sider .ant-menu-item.ant-menu-item-selected.ant-menu-item-only-child{
-    color: green;
+.category-sider .ant-menu-item.ant-menu-item-selected.ant-menu-item-only-child {
+  color: #0991be;
 }
 
-.category-sider .ant-layout-sider.ant-layout-sider-dark.categoriesSider{
-  width: 100%!important;
-  min-width: 100%!important;
-  max-width: 100%!important;
+.category-sider .ant-layout-sider.ant-layout-sider-dark.categoriesSider {
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
 }

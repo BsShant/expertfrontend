@@ -1,12 +1,13 @@
 import React from 'react';
 import './styles.css'
-import AboutBg from '../../assets/images/aboutUsBg.jpg'
+import AboutBg from '../../assets/images/aboutBg.png'
 import SuitMan from '../../assets/images/suitMan.png'
 
 import Testimonials from '../../components/testimonials/Testimonials';
 import Header from '../../components/header/Header';
 import Bottom from '../../components/bottom/Bottom';
 import FooterSection from '../../components/footerSection/FooterSection';
+import EasyFooter from '../../components/easyFooter/EasyFooter';
 
 const AboutPage = () => {
   return (
@@ -16,19 +17,25 @@ const AboutPage = () => {
         <Header />
         <div className="container">
           <div className="about-page-inner-container">
-            <div className="row" style={{height:"100%"}}>
+            <div className="row" style={{ height: "100%" }}>
               <div className="col-md-12 col-sm-12 col-lg-6 order-md-2 order-lg-1 order-sm-2  order-2  order-xlg-1">
                 <div className="about-text-detail">
-                  <div className="top-title">About us</div>
-                  <div className="header">We are Expert</div>
+                  {/* <div className="top-title">About us</div> */}
+                  <div className="header">About US</div>
                   <div className="body">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and...
-                    <br />
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and...
+
+
+                    At Expert Business, we’re problem solvers. And we specialize in solving those
+                    specifically in the business field. Our team of experts has created the best
+                    service process that not only saves time for
+                    the client but also gets them the best prospect for business.
+
+                    <br /><br/>
+                    We are in a team where professionals from both technical and functional
+                    field groups together with the objective of providing appropriate business
+                    solutions. It realizes the importance of functional knowledge and its
+                    impact on developing business solutions.
+
                   </div>
                 </div>
               </div>
@@ -39,7 +46,7 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-      <div className="ourTeam-section snap-y">
+      {/* <div className="ourTeam-section snap-y">
         <div className="container">
           <div className="our-team-inner-container">
             <div className="our-team-heading">
@@ -102,10 +109,10 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-      </div>
-      <Testimonials type="about" naa />
-      <FooterSection naa/>
-      {/* <Bottom /> */}+
+      </div> */}
+      {/* <Testimonials type="about" naa /> */}
+      <EasyFooter />
+      {/* <Bottom /> */}
     </>
   )
 }

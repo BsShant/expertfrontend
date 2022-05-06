@@ -30,19 +30,14 @@ const AboutUsSection = () => {
                         </div>
                         <div class="about-desc" data-aos="fade-right">
                             <p>
-                                Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla
-                                ut
-                                metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
-                                Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus maecenas tempus.
+                            Expert Business serves professional and specialist business support to businesses of all 
+                            sizes and in all sectors. We provide a support service to a company from pre incorporation 
+                            to operation till winding-up. 
                             </p>
 
                             <p>
-                                Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat
-                                massa
-                                quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim
-                                justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
-                                mollis
-                                pretium.
+                            We’re trusted to
+                             provide flexible business services to some of the leading public and private companies.
                             </p>
                         </div>
                     </div>
@@ -59,9 +54,9 @@ const AboutUsSection = () => {
                     </div>
                     <div class="col-sm-12 col-md-7">
                         <div class="tech-desc" data-aos="fade-right">
-                            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut
-                            metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
-                            Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus maecenas tempus.
+                        At Expert Business, we’re problem solvers. And we specialize in solving those specifically
+                         in the business field. Our team of experts has created the best service process
+                         that not only saves time for the client but also gets them the best prospect for business.
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-5 d-none d-sm-block">

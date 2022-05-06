@@ -7,7 +7,7 @@ import {
 const INITIAL_STATE = {
   categoryCollapse: false,
   categoryMobileCollapse: true,
-  selectedCategory: "legal service",
+  selectedCategory: "financial-services",
 };
 
 export const categoryReducer = (state = INITIAL_STATE, action) => {

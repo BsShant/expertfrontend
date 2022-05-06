@@ -1,4 +1,7 @@
 /* team section */
+.team-section{
+  overflow: hidden;
+}
 .team-section .team-list .row > div {
     padding: 0;
     margin: 0;

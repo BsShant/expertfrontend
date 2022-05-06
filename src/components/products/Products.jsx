@@ -16,16 +16,22 @@ const Products = (props) => {
     return (
         <div className="products-item-container" data-aos="fade-up"
             data-aos-easing="ease-in-sine">
-            <div className="row" style={{height:"100%"}}>
-                <div className="col-lg-4 col-md-12 col-12 col-sm-12 products-align">           
-                 <img src={image} alt="Sales" />
+            <div className="row product-small" style={{ height: "100%" }}>
+                <div className="col-lg-12 col-md-12 col-12 col-sm-12 products-align">
+                    <img src={image} alt="Sales" />
+                    <div className="product-text">
+                        <div className="product-heading">
+                            {name}
+                        </div>
+                        <div className="product-para">
+                            This product helps to solve your digital problem in quickest way 
+                            possible. It is also efficient enough to return money for value.
+                        </div>
+                    </div>
                 </div>
-                <div className="col-lg-8 col-md-12 col-sm-12 col-12 products-align">
-                <div className="product-name">{name}</div>
-            <div className="product-body">
-                <div className="prod-name">{name}</div>
-                <div className="prod-detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                </div>
+                {/* <div className="col-lg-12 col-md-12 col-sm-12 col-12 products-align"> */}
+                {/* <div className="product-name">{name}</div> */}
+                {/* <div className="product-body">
                 <div className="prod-links">
                     <a href="facebook.com" target="_blank" className="facebook-icon" >
                         <FontAwesomeIcon icon={faWeibo} style={{ color: "white" }} />
@@ -40,8 +46,8 @@ const Products = (props) => {
                         <FontAwesomeIcon icon={brands("youtube")} style={{ color: "white" }} />
                     </a>
                 </div>
-            </div>
-                </div>
+            </div> */}
+                {/* </div> */}
             </div>
             {/* <img src={image} alt="Sales" />
             <div className="product-overlay"></div>

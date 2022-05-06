@@ -13,26 +13,26 @@ const FundRaiserPage = () => {
         <div className='fund-raiser-page-container'>
             <div className="container">
                 <div className="fund-raiser-page-inner-container">
-                    <div className="fund-raiser-heading col-md-8">
-                        <div className="fund-raiser-header">Fund Our Projects</div>
-                        <div className="fund-raiser-para">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and...
-                        </div>
-                    </div>
+
                     <div className="featured-project">
                         {/* <div className="latest-projects-header">
                            Our Featued Project
                         </div> */}
+                        <div className="fund-raiser-heading col-md-12">
+                            <div className="fund-raiser-header">Fund Our Projects</div>
+                            {/* <div className="fund-raiser-para">
+                           Fund raisers are dedicated to those projects which helps the community we operate in.
+                        </div> */}
+                        </div>
                         <div className="row">
-                            <div className="col-md-6">
+                            <div className="col-md-6 order-md-2">
                                 <div className="featured-media">
                                     <Link to="/fund-raiser/project-page">
                                         <img src={RedPanda} alt="Red Panda" />
                                     </Link>
                                 </div>
                             </div>
-                            <div className="col-md-6" style={{ display: "flex", alignItems: "center" }}>
+                            <div className="col-md-6 order-md-1" style={{ display: "flex", alignItems: "center" }}>
 
                                 <div className="featured-detail">
                                     <div className="fund-raiser-description">
@@ -53,7 +53,8 @@ const FundRaiserPage = () => {
                                     <div className="days-left">
                                         15 days remains
                                     </div>
-                                    <Link to='/fund-raiser/project-page' className='alternate-button' style={{ marginTop: "15px" }}>Learn More</Link>
+                                    <a href="#"></a>
+                                    <Link to='/fund-raiser/project-page' class="btn-flip aos-init aos-animate" data-back="+ LEARN MORE" data-front="+ LEARN MORE" data-aos="fade-up" style={{ marginTop: "15px" }} />
                                 </div>
                             </div>
                         </div>

@@ -1,22 +1,19 @@
 .fund-raiser-page-container {
   min-height: 100vh;
-  background-color: #2b9123;
+  /* background-color: #2b9123; */
   padding: 60px 0;
 }
 .fund-raiser-page-inner-container {
 }
 
 .fund-raiser-heading {
-  text-align: center;
-  margin: auto;
-  margin-bottom: 40px;
+  text-align: left;
+  margin-bottom: 0px;
 }
 .fund-raiser-header {
-  color: white;
   font-size: 28px;
 }
 .fund-raiser-para {
-  color: white;
 }
 
 .fund-raiser-body {
@@ -48,36 +45,37 @@
 }
 .featured-project .fund-raiser-description {
   background-color: transparent;
-  color: white;
+  /* color: white; */
   padding: 0;
   margin-bottom: 15px;
 }
 .featured-project .funding-section {
   background-color: transparent;
-  color: white;
+  /* color: white; */
   margin-bottom: 10px;
   padding: 0;
 }
 .featured-project .days-left {
   background-color: transparent;
-  color: white;
+  /* color: white; */
   padding: 0;
 }
 .featured-project .funding-bar {
-  background-color: white;
+  background: rgba(0,0,0,0.2);
+  /* background-color: white; */
 }
 .featured-project .fund-raiser-type {
-  color: white;
+  /* color: white; */
 }
 
 .latest-projects-header {
   font-size: 28px;
-  color: white;
+  /* color: white; */
   margin-bottom: 30px;
 }
 
 .featured-project .funding-inner-bar{
-  background-color: #2b9123;
+  background-color: #0991be;
   width: 80%;
   height: 100%;
 

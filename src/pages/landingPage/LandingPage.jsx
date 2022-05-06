@@ -20,7 +20,7 @@ import Header from '../../components/header/Header';
 const LandingPage = () => {
     return (
         <div className='bruhh'>
-            <Header />
+            <Header header />
             <EasyHero />
             <AboutUsSection />
             {/* <WhyUs /> */}

@@ -1,11 +1,15 @@
 /* tech container */
 .tech-container {
     padding: 100px 0;
+    overflow: hidden;
   }
   
   @media only screen and (max-width: 768px) {
     .tech-container {
       padding: 50px 50px;
+    }
+    .full-slider{
+      padding: 50px 0!important;
     }
   }
   
@@ -115,6 +119,9 @@
   }
   
   /* work section */
+  .work-section{
+    overflow: hidden;
+  }
   .work-section .row > div {
     padding: 0 !important;
   }
@@ -163,4 +170,10 @@
     top: 50%;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
+  }
+  .work-card:hover .card-content h3{
+    color: white;
+  }
+  .work-card:hover .card-content h5{
+    color: white;
   }

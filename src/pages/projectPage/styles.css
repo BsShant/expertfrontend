@@ -1,13 +1,13 @@
 .project-page-container {
   min-height: 100vh;
-  background: #2b9123;
+  /* background: #2b9123; */
   padding: 60px 0;
 }
 .project-page-inner-container {
 }
 
 .project-page-image-container {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 .project-page-image-container img {
   width: 100%;
@@ -15,14 +15,15 @@
   aspect-ratio: 5/3;
 }
 .project-page-text {
-  color: white;
+  /* color: white; */
 }
 .project-category {
   font-size: 14px;
-  color: white;
+  color: #0991be;
+  /* color: white; */
 }
 .project-title {
-  color: white;
+  /* color: white; */
   font-size: 28px;
 }
 .progress-container {
@@ -34,11 +35,11 @@
 
 .progress-container .funding-raised-left {
   text-decoration: none !important;
-  color: white;
+  /* color: white; */
 }
 .progress-container .funding-raised-right {
   text-decoration: none !important;
-  color: white;
+  /* color: white; */
 }
 .progress-container .funding-collected {
   display: flex;
@@ -48,23 +49,78 @@
 }
 .progress-container .funding-bar {
   height: 6px;
-  background: white;
-  border-radius: 20px;
-  border: 0.5px solid #fff;
+  /* background: white; */
+  background: rgba(0, 0, 0, 0.2);
 }
 .progress-container .days-left {
   font-size: 14px;
   padding: 5px 10px;
-  background-color: white;
+  /* background-color: white; */
   text-decoration: none !important;
 }
 .progress-container .days-left {
   background: transparent;
-  color: white;
+  /* color: white; */
   padding-left: 0;
 }
 
+.people-supported {
+  /* color: white; */
+}
+.we-accept-container {
+  margin-top: 20px;
+}
+.we-accept {
+  display: flex;
+}
+.we-accept-heading {
+  font-size: 18px;
+  font-family: nova-light;
+}
+.we-accept div {
+  height: 35px;
+  overflow: hidden;
+  position: relative;
+}
+.we-accept div:not(:last-child) {
+  margin-right: 2px;
+}
+.esewa {
+}
+.esewa img {
+  width: 25px;
+}
+.khalti {
+}
+.khalti img {
+  width: 35px;
+}
+.ime-pay {
+  width: 73px;
+}
+.ime-pay img {
+  width: 90px;
+  position: absolute;
+  top: -18px;
+  left: -13px;
+}
 
-.people-supported{
-  color: white;
+@media (max-width: 992px) {
+  .small-mobile-image {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+  }
+  .large-device-project-heading {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .large-device-project-heading {
+    display: flex;
+    flex-direction: column;
+  }
+  .small-mobile-image {
+    display: none;
+  }
 }

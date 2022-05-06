@@ -20,10 +20,10 @@
     padding: 0 20px;
 }
 .category-sider .ant-menu-light .ant-menu-item:hover{
-    color: green;
+    color: #0991be;
 }
 .category-sider .ant-menu-item.ant-menu-item-selected.ant-menu-item-only-child{
-    color: green;
+    color: #0991be;
 }
 
 .category-sider .ant-layout-sider.ant-layout-sider-dark.categoriesSider{

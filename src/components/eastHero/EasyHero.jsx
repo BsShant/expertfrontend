@@ -15,9 +15,7 @@ const EasyHero = () => {
                                 The solutions of tomorrow.
                             </h3>
                             <div class="hero-desc">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quos temporibus nihil qui
-                                repellat.
-                            </div>
+                            A leading technology firm with profound business and functional knowledge.                            </div>
                             <button class="learn-more">
                                 <span class="circle" aria-hidden="true">
                                     <span class="icon arrow"></span>
@@ -28,16 +26,18 @@ const EasyHero = () => {
                     </div>
                     <div class="col-sm-12 col-md-8 globe-container">
                         {/* <div className="globe-earth"> */}
+                        <div className='globb'>
                             <Canvas camera={{ zoom: 1, position: [200, 4000, 20000], fov: 28, near: 20, far: 1000000, rotateY: 45 / 180 * Math.PI }}>
-                                <ambientLight intensity={0.1} />
+                                <ambientLight intensity={1} />
                                 {/* <Sky></Sky> */}
-                                <hemisphereLight color={0xffeeb1} groundColor={0x0880828}  intensity={8} />
+                                <hemisphereLight color={0xffeeb1} groundColor={0x0991be} intensity={2} />
                                 {/* <pointLight position={[0, 100, 0]} color={0xffeeb1} intensity={8}/> */}
                                 <Suspense fallback={null}>
                                     <NGlobe />
                                 </Suspense>
                                 <OrbitControls autoRotate={true} autoRotateSpeed={2} enablePan={false} enableZoom={false} />
                             </Canvas>
+                        </div>
 
                         {/* </div> */}
                         {/* <div class="globe-earth">

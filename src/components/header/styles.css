@@ -2,27 +2,29 @@
   height: 80px;
   width: 100%;
   background: white;
+  overflow: hidden;
 }
-.header-inner-container{
+.header-inner-container {
   height: 80px;
 }
 .logo-container {
   background-color: white;
+  position: relative;
 }
 .header-nav-container {
 }
 .logo-container a {
   margin-left: -25px;
 }
-.logo-container{
+.logo-container {
   display: flex;
   align-items: center;
 }
 .header-fixed {
   position: fixed;
   width: 100%;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   background: white;
   height: 66px;
   animation: smoothScroll 250ms forwards;
@@ -39,9 +41,25 @@
   }
 }
 
-.header-there{
+.header-there {
   position: fixed;
   width: 100%;
   background-color: white;
   z-index: 20;
+}
+.header-container .home-link img {
+  width: 285px;
+  position: absolute;
+  background: transparent;
+  top: -130px;
+  left: -55px;
+  overflow: hidden;
+}
+.header-container .home-link {
+  display: block;
+  height: 33px;
+  width: 174px;
+  overflow: hidden;
+  position: relative;
+  margin-left: -1px;
 }

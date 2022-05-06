@@ -2,7 +2,7 @@ import { Layout, Menu } from 'antd';
 import React from 'react'
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { useSelector, useDispatch} from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import './styles.css'
 import { setSelectedCategory } from '../../store/categoryReducer/categoryStore.actions';
 const CategoriesSider = (props) => {
@@ -13,7 +13,7 @@ const CategoriesSider = (props) => {
     const location = useLocation();
     let url = location.pathname;
     const handleClick = (e) => {
-       dispatch(setSelectedCategory(e))
+        dispatch(setSelectedCategory(e))
     }
     const mySelected = url.split("/")[url.split("/").length - 1];
     return (
@@ -37,77 +37,34 @@ const CategoriesSider = (props) => {
                     // defaultSelectedKeys={[mySelected]}
                     >
                         <Menu.Item
-                            key="legal service"
+                            key="financial-services"
+                        >
+                            Financial Services
+                        </Menu.Item>
+                        <Menu.Item
+                            key="legal-services"
 
                         >
                             Legal Service
                         </Menu.Item>
                         <Menu.Item
-                            key="insurance"
+                            key="security-services"
 
                         >
-                            Insurance
+                            Security Services
                         </Menu.Item>
                         <Menu.Item
-                            key="marketing"
+                            key="it-services"
                         >
-                            Marketing
+                            IT Services
                         </Menu.Item>
                         <Menu.Item
-                            key="finance"
+                            key="insurance-services"
+
                         >
-                            Finance
+                            Insurance Services
                         </Menu.Item>
-                        <Menu.Item
-                            key="consulting"
-                        >
-                            Consulting
-                        </Menu.Item>
-                        <Menu.Item
-                            key="management"
-                        >
-                            Management
-                        </Menu.Item>
-                        <Menu.Item
-                            key="training"
-                        >
-                            Training
-                        </Menu.Item>
-                        <Menu.Item
-                            key="research"
-                        >
-                            Research
-                        </Menu.Item>
-                        <Menu.Item
-                            key="language"
-                        >
-                            Language
-                        </Menu.Item>
-                        <Menu.Item
-                            key="designing"
-                        >
-                            Designing
-                        </Menu.Item>
-                        <Menu.Item
-                            key="strategy"
-                        >
-                            Strategy
-                        </Menu.Item>
-                        <Menu.Item
-                            key="it"
-                        >
-                            IT
-                        </Menu.Item>
-                        <Menu.Item
-                            key="investment"
-                        >
-                            Investment
-                        </Menu.Item>
-                        <Menu.Item
-                            key="engineering"
-                        >
-                            Engineering
-                        </Menu.Item>
+
                     </Menu>
                 </Sider>
             </div>

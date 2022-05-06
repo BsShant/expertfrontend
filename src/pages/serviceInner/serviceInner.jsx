@@ -36,7 +36,7 @@ const ServiceInner = () => {
                             </div>
                             <div className="service-price">Rs. 12000 for full package</div>
                             <div className="support-container">
-                                <button className='alternate-button'>Purchase</button>
+                            <a href="/our-services" class="btn-flip" data-back="+ PURCHASE" data-front="+ PURCHASE"></a>
                             </div>
                         </div>
                     </div>

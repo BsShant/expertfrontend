@@ -1,8 +1,11 @@
 /* about section */
 .about-section {
-    margin-top: -30px;
+    margin-top: -10px;
+
   }
-  
+  .about-us-section-container{
+    overflow: hidden;
+  }
   .about-section .about-container {
     background-color: #f9f9f9;
     padding: 130px 50px;
