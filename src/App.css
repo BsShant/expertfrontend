@@ -30,7 +30,7 @@
 }
 
 .App-link {
-  color: #0991be;
+  color: #1496d1;
 }
 
 @keyframes App-logo-spin {
@@ -49,11 +49,11 @@ body {
 
 .primary-button {
   background: transparent !important;
-  color: #0991be !important;
+  color: #1496d1 !important;
   height: 45px !important;
   width: 120px !important;
   cursor: pointer !important;
-  border: #0991be 2px solid !important;
+  border: #1496d1 2px solid !important;
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -62,7 +62,7 @@ body {
   transition: all 500ms ease-in-out;
 }
 .primary-button:hover {
-  background: #0991be !important;
+  background: #1496d1 !important;
   color: white !important;
   height: 45px !important;
   width: 120px !important;
@@ -91,7 +91,7 @@ body {
 }
 .alternate-button:hover {
   background-color: white !important;
-  color: #0991be !important;
+  color: #1496d1 !important;
   border: 2px solid white !important;
 }
 
@@ -124,13 +124,18 @@ body {
   padding: 1px 30px!important;
 
 }
+.btn-flip-product::after{
+  padding: 1px 10px!important;
+}
 .btn-flip-alternate::before {
   background: white !important;
   color: black !important;
   padding: 1px 30px!important;
 
 }
-
+.btn-flip-product::before{
+  padding: 1px 10px!important;
+}
 .btn-flip:hover:after {
   opacity: 1;
   -webkit-transform: translateY(0) rotateX(0);
@@ -171,7 +176,7 @@ body {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   position: relative;
-  background: #0991be;
+  background: #1496d1;
   content: attr(data-front);
   -webkit-transform: translateY(0) rotateX(0);
   transform: translateY(0) rotateX(0);
@@ -188,18 +193,18 @@ body {
 /* owl carousel */
 .owl-carousel .owl-dots .owl-dot {
   background: white;
-  border: 1px solid #0991be !important;
+  border: 1px solid #1496d1 !important;
   width: 10px;
   height: 10px;
   margin-right: 15px;
 }
 
 .owl-carousel .owl-dots .owl-dot.active {
-  background: #0991be;
+  background: #1496d1;
 }
 
 .owl-carousel .owl-dots .owl-dot:focus {
-  border: 1px solid #0991be !important;
+  border: 1px solid #1496d1 !important;
   outline: none;
 }
 

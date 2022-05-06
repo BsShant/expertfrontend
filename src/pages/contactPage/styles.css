@@ -6,7 +6,7 @@
   position: relative;
   }
 .contact-page-inner-container {
-  background-color: #0991be;
+  background-color: #1496d1;
   padding: 40px 0 10px;
   width: 70%;
   margin: auto;
@@ -172,7 +172,7 @@
 .contact-page-social-media-item {
   height: 35px;
   width: 35px;
-  background: #0991be;
+  background: #1496d1;
   transform: rotate(45deg);
   display: flex;
   justify-content: center;
@@ -187,7 +187,7 @@
   background: white !important;
 }
 .contact-page-social-media-item:hover svg {
-  color: #0991be !important;
+  color: #1496d1 !important;
 }
 
 .contact-page-social-media-item a {
@@ -197,7 +197,7 @@
   transform: rotate(0deg);
   height: 100%;
   width: 100%;
-  background-color: #0991be !important;
+  background-color: #1496d1 !important;
 }
 .contact-page-social-media-item svg {
   transform: rotate(-45deg);

@@ -19,7 +19,7 @@
 }
 .project-category {
   font-size: 14px;
-  color: #0991be;
+  color: #1496d1;
   /* color: white; */
 }
 .project-title {
@@ -114,6 +114,12 @@
   .large-device-project-heading {
     display: none;
   }
+  .people-supported {
+    margin-top: 30px;
+  }
+  .progress-container {
+    margin-top: 0px;
+  }
 }
 @media (min-width: 992px) {
   .large-device-project-heading {
@@ -123,4 +129,5 @@
   .small-mobile-image {
     display: none;
   }
+  
 }

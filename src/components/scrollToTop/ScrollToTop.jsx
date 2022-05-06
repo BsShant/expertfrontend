@@ -8,6 +8,7 @@ import { cloaseLoginModal, closeLoginModal, triggerModal } from '../../store/lay
 import Logo from '../../assets/images/logo.png'
 import LoginImage from '../../assets/images/login.png'
 import { useState } from 'react';
+import PreLoader from '../preLoader/PreLoader';
 // import Typing from 'react-typing-animation';
 const ScrollToTop = (props) => {
   const loginModal = useSelector(state => state.layoutStore.loginModal)
@@ -32,8 +33,15 @@ const ScrollToTop = (props) => {
     window.scrollTo(0, 0);
   }, [location]);
   return <>
-  {props.children}
-  {/* <div class='cursor' id="cursor"></div> */}
+    <div className="main-child-container">
+      {props.children}
+    </div>
+
+      <PreLoader />
+
+
+
+    {/* <div class='cursor' id="cursor"></div> */}
     <Modal footer={null}
       header={null} title="Basic Modal"
       visible={loginModal} onOk={() =>
@@ -53,7 +61,7 @@ const ScrollToTop = (props) => {
             <div className="login-text">
               To {login ? 'Login' : 'Register'},<br />
               {/* <Typing> */}
-                Please enter your mobile number
+              Please enter your mobile number
               {/* </Typing> */}
             </div>
           </div>

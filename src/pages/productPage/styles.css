@@ -44,7 +44,7 @@
   margin-bottom: 20px;
 }
 .products-upper-half-heading span {
-  color: #0991be !important;
+  color: #1496d1 !important;
 }
 .products-upper-half-para {
   font-family: nova-light;
@@ -55,4 +55,5 @@
 }
 .products-upper-half-image img {
   max-width: 100%;
+  transform: rotate(30deg);
 }

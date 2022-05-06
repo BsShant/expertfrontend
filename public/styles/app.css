@@ -83,7 +83,7 @@ p {
   height: 33.4%;
   position: absolute;
   left: 0;
-  background: #0991be;
+  background: #1496d1;
 }
 
 .preloader .layers span:nth-child(1) {
@@ -420,7 +420,7 @@ p {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   position: relative;
-  background: #0991be;
+  background: #1496d1;
   content: attr(data-front);
   -webkit-transform: translateY(0) rotateX(0);
           transform: translateY(0) rotateX(0);
@@ -436,18 +436,18 @@ p {
 /* owl carousel */
 .owl-carousel .owl-dots .owl-dot {
   background: white;
-  border: 1px solid #0991be !important;
+  border: 1px solid #1496d1 !important;
   width: 10px;
   height: 10px;
   margin-right: 15px;
 }
 
 .owl-carousel .owl-dots .owl-dot.active {
-  background: #0991be;
+  background: #1496d1;
 }
 
 .owl-carousel .owl-dots .owl-dot:focus {
-  border: 1px solid #0991be !important;
+  border: 1px solid #1496d1 !important;
   outline: none;
 }
 
@@ -616,7 +616,7 @@ p {
   margin: 0;
   width: 3rem;
   height: 3rem;
-  background: #0991be;
+  background: #1496d1;
   border-radius: 0;
 }
 
@@ -662,7 +662,7 @@ p {
   bottom: 0;
   padding: 0.75rem 0;
   margin: 0 0 0 1.85rem;
-  color: #0991be;
+  color: #1496d1;
   font-weight: 700;
   line-height: 1.6;
   text-align: center;
@@ -748,7 +748,7 @@ p {
 }
 
 .about-section .about-container .about-title span {
-  color: #0991be;
+  color: #1496d1;
 }
 
 @media only screen and (max-width: 768px) {
@@ -804,7 +804,7 @@ p {
 }
 
 .tech-container .tech-title span {
-  color: #0991be;
+  color: #1496d1;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1050,7 +1050,7 @@ p {
 .tm-list .tm-name {
   margin-top: 15px;
   font-size: 1.2rem;
-  color: #0991be;
+  color: #1496d1;
   font-family: nova-bold;
 }
 
@@ -1072,7 +1072,7 @@ p {
 }
 
 .blog-card a:hover {
-  color: #0991be;
+  color: #1496d1;
   text-decoration: none;
 }
 
@@ -1132,7 +1132,7 @@ p {
 .blog-card .blog-card-body span.date {
   width: 100%;
   background-color: transparent !important;
-  color: #0991be !important;
+  color: #1496d1 !important;
   font-size: 13px !important;
   font-style: italic;
   text-decoration: none;
@@ -1270,7 +1270,7 @@ footer .footer-contact-info span {
 }
 
 footer .footer-contact-info span i {
-  color: #0991be;
+  color: #1496d1;
   margin-right: 15px;
 }
 /*# sourceMappingURL=app.css.map */

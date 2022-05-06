@@ -22,7 +22,7 @@ const ServiceItem = (props) => {
             <div className="service-name-box">
                 <div className="service-name">{title}</div>
                 <div className="service-item-button">
-                    <Link className='primary-button' to="/our-services/service-page">Explore</Link>
+                    <Link className='btn-flip btn-flip-alternate btn-flip-product' data-back='+ VIEW' data-front='+ VIEW' to="/our-services/service-page"></Link>
                 </div>
             </div>
         </div>

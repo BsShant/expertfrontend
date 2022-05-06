@@ -1,7 +1,7 @@
 /*menu item----ul*/
 .ant-menu.ant-menu-root.ant-menu-horizontal.ant-menu-light {
   border-bottom: none;
-  color: #0991be;
+  color: #1496d1;
   /* background-color: #2b9123; */
   width: 100%;
   height: 100%;
@@ -63,11 +63,11 @@
 
 /*hover antmenu */
 .ant-menu-horizontal > .ant-menu-item a:hover {
-  color: #0991be;
+  color: #1496d1;
 }
 /*selected menu*/
 .ant-menu-item-selected a {
-  color: #0991be !important;
+  color: #1496d1 !important;
 }
 
 .nav-container {
@@ -128,7 +128,7 @@
   top: 0;
   right: 0;
   bottom: 0;
-  border-right: 3px solid #0991be;
+  border-right: 3px solid #1496d1;
   transform: scaleY(0.0001);
   opacity: 0;
   transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1),
@@ -136,7 +136,7 @@
   content: "";
 }
 .login-nav {
-  background-color: #0991be;
+  background-color: #1496d1;
   color: white;
   border: none;
   height: 33px;

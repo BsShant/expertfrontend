@@ -4,6 +4,7 @@ import ClimateChange from '../../assets/images/climateChange.jpeg'
 import Esewa from '../../assets/images/esewa.png'
 import Khalti from '../../assets/images/khalti.png'
 import ImePay from '../../assets/images/imePay.png'
+import RedPanda from '../../assets/images/redPanda.jpg'
 
 const ProjectPage = () => {
     return (
@@ -19,7 +20,7 @@ const ProjectPage = () => {
                                 </div>
                             </div>
                             <div className="project-page-image-container">
-                                <img src={ClimateChange} alt="Climate change" />
+                                <img src={RedPanda} alt="Climate change" />
                             </div>
 
                         </div>
@@ -37,7 +38,7 @@ const ProjectPage = () => {
                                     <div className="funding-raised-right">80%</div>
                                 </div>
                                 <div className="funding-bar">
-                                    <div className="funding-inner-bar" style={{ background: "#0991be" }}></div>
+                                    <div className="funding-inner-bar" style={{ background: "#1496d1" }}></div>
                                 </div>
                                 <div className="days-left">
                                     15 days remains

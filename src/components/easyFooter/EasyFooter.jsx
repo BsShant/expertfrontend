@@ -42,16 +42,16 @@ const EasyFooter = () => {
                                 <div class="col-sm-12 col-md-8 footer-bottom">
                                     <div class="footer-contact-info">
                                         <div className="footer-info-box">
-                                            <FontAwesomeIcon icon={faEnvelope} style={{ color: "#0991be", marginRight: "5px" }} />
+                                            <FontAwesomeIcon icon={faEnvelope} style={{ color: "#1496d1", marginRight: "5px" }} />
                                             <span>  info@easyventure.com</span>
                                         </div>
                                         <div className="footer-info-box">
-                                            <FontAwesomeIcon icon={faPhoneAlt} style={{ color: "#0991be", marginRight: "5px" }} />
+                                            <FontAwesomeIcon icon={faPhoneAlt} style={{ color: "#1496d1", marginRight: "5px" }} />
                                             <span>  +9779800000000, 015286235</span>
 
                                         </div>
                                         <div className="footer-info-box">
-                                            <FontAwesomeIcon icon={faMapMarker} style={{ color: "#0991be", marginRight: "5px" }} />
+                                            <FontAwesomeIcon icon={faMapMarker} style={{ color: "#1496d1", marginRight: "5px" }} />
                                             <span>  Hongkong, Kathmandu</span>
 
                                         </div>

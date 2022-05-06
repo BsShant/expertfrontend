@@ -41,12 +41,12 @@ const Header = (props) => {
     <div className={`header-container }`} style={{ boxShadow: `${!props.header ? '0px 2px 4px 0px rgba(0,0,0,0.2)' : ''}` }} ref={headerRef}>
       <div className="container">
         <div className="header-inner-container row">
-          <div className="col-4 col-md-4 col-sm-4 col-xs-4 col-lg-3 logo-container">
+          <div className="col-8 col-md-4 col-sm-8 col-xs-4 col-lg-3 logo-container">
             <Link className='home-link' to='/'>
               <img src={Logo} alt="Company's Logo" />
             </Link>
           </div>
-          <div className="col-8 col-md-8 col-sm-8 col-xs-8 col-lg-9">
+          <div className="col-4 col-md-8 col-sm-4 col-xs-8 col-lg-9">
             <Nav />
           </div>
         </div>

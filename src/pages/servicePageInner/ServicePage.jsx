@@ -20,6 +20,7 @@ import { useLocation, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux'
 import { triggerMobileSliderCollapse, triggerSliderCollapse } from '../../store/categoryReducer/categoryStore.actions';
 import ServiceItemMobile from '../../components/serviceItemMobile/ServiceItem';
+import Products from '../../components/products/Products';
 const services = [
   {
     title: "Financial Planning",
@@ -114,15 +115,15 @@ const ServicePageInner = (props) => {
           <div className="category-inner-body">
             <div className="service-body container">
               <div className="service-page-heading">
-                <div className="page-header">
-                 {category}
+                <div className="page-header" style={{textTransform:"capitalize"}}>
+                 {category.replace("-", " ")}
                 </div>
               </div>
               <div className="service-page-body">
                 <div className="row">
                   {services.filter(service => service.category ===category).map(service => {
                     return <div className="col-12 col-lg-4 col-md-6 col-sm-6 col-xs-12" style={{marginBottom:"30px"}}>
-                      <ServiceItemMobile title={service.title} detail={service.detail} image={service.image} />
+                      <ServiceItem title={service.title} detail={service.detail} image={service.image} />
 
                     </div>
 
