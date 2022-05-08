@@ -112,7 +112,9 @@ const EasyTeam = () => {
                 <div class="tech-container" style={{ paddingRight: "10px" }}>
                     <div class="row" style={{ height: "100%" }}>
                         <div class="col-sm-12 col-md-5 my-auto" data-aos="fade-right">
-                            <h3 class="tech-title text-left">What Other Say <span> About Us</span></h3>
+                            <h3 class="tech-title text-left">What Other Say 
+                            <br />
+                            <span> About Us</span></h3>
                         </div>
                         <div class="col-sm-12 col-md-7" data-aos="fade-left">
                             <ReactOwlCarousel nav={false}

@@ -44,3 +44,42 @@
   /* color: white; */
   font-size: 18px;
 }
+
+
+.service-we-accept-container {
+  margin-top: 20px;
+}
+.service-we-accept {
+  display: flex;
+}
+.service-we-accept-heading {
+  font-size: 18px;
+  font-family: nova-light;
+}
+.service-we-accept div {
+  height: 35px;
+  overflow: hidden;
+  position: relative;
+}
+.service-we-accept div:not(:last-child) {
+  margin-right: 2px;
+}
+.service-esewa {
+}
+.service-esewa img {
+  width: 25px;
+}
+.service-khalti {
+}
+.service-khalti img {
+  width: 35px;
+}
+.service-ime-pay {
+  width: 73px;
+}
+.service-ime-pay img {
+  width: 90px;
+  position: absolute;
+  top: -18px;
+  left: -13px;
+}

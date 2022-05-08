@@ -33,7 +33,7 @@ const EasyHero = () => {
                                 <ambientLight intensity={1} />
                                 {/* <Sky></Sky> */}
                                 <hemisphereLight color={0x1496d1} groundColor={0x0991be} intensity={2} />
-                                {/* <pointLight position={[0, 100, 0]} color={0xffeeb1} intensity={8}/> */}
+                                <pointLight position={[0, 50000, -50000]} color={0xffeeb1} intensity={2}/>
                                 <Suspense fallback={null}>
                                     <NGlobe />
                                 </Suspense>

@@ -21,6 +21,21 @@ import ITImage from '../../assets/images/it.jpeg'
 import SecurityGuards from '../../assets/images/securityGuard.jpg'
 import AlarmSystems from '../../assets/images/alarmSystem.jpg'
 import AccessControl from '../../assets/images/accessControl.jpeg'
+import Website from '../../assets/images/website.jpg'
+import webHosting from '../../assets/images/webHosting.jpg'
+import SocialMedia from '../../assets/images/socialMedia.jpeg'
+import LogoDesign from '../../assets/images/logoDesign.jpg'
+import MobileApps from '../../assets/images/mobileApps.jpeg'
+import Domain from '../../assets/images/domain.jpeg'
+import LifeInsurance from '../../assets/images/lifeInsuraance.jpeg'
+import MotorInsurance from '../../assets/images/motorInsurance.jpeg'
+import HealthInsurance from '../../assets/images/healthInsurance.png'
+import TravelInsurance from '../../assets/images/travelInsurance.webp'
+import MobileInsurance from '../../assets/images/mobileInsurance.png'
+import PropertyInsurance from '../../assets/images/propertyInsurance.jpeg'
+import FormFilling from '../../assets/images/formFilling.jpeg'
+import DollarCard from '../../assets/images/dollarCard.png'
+import MutualFund from '../../assets/images/mutualFund.jpg'
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -33,6 +48,24 @@ const services = [
     image: FinancePlanning,
     category: "financial-services",
     detail: "We help you to secure financially"
+  },
+  {
+    title: "Bank Accounts",
+    image: FormFilling,
+    category: "financial-services",
+    detail: "We help you to open and manage bank accounts"
+  },
+  {
+    title: "Dollar Card",
+    image: DollarCard,
+    category: "financial-services",
+    detail: "We help you to get and maintain dollar card"
+  },
+  {
+    title: "Mutual Funds",
+    image: MutualFund,
+    category: "financial-services",
+    detail: "We help you with mutual funds"
   },
   {
     title: "Investment",
@@ -110,11 +143,48 @@ const services = [
   },
 
   {
-    title: "Information Technology ",
-    image: ITImage,
+    title: "Domain Registration ",
+    image: Domain,
     category: "it-services",
-    detail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+    detail: "We help you with domain registration. "
   },
+  
+  {
+    title: "Web Hosting ",
+    image: webHosting,
+    category: "it-services",
+    detail: "We help you with web hosting"
+  },
+  
+  {
+    title: "Logo Design",
+    image: LogoDesign,
+    category: "it-services",
+    detail: "We help with your company logo designs"
+  },
+
+  
+  {
+    title: "Websites",
+    image: Website,
+    category: "it-services",
+    detail: "We can create your company website"
+  },
+  
+  {
+    title: "Mobile Apps",
+    image: MobileApps,
+    category: "it-services",
+    detail: "We help to create your company's mobile app"
+  },
+  
+  {
+    title: "Social Media",
+    image: SocialMedia,
+    category: "it-services",
+    detail: "We help to handle your social media."
+  },
+
   {
     title: "IDS proection",
     image: Cyber,
@@ -152,10 +222,40 @@ const services = [
     detail: "We help you to control who gets access"
   },
   {
-    title: "Insurance (Life and Non Life)",
-    image: Consulting,
+    title: "Life Insurance",
+    image: LifeInsurance,
     category: "insurance-services",
     detail: "We ensure you get insured. "
+  },
+  {
+    title: "Motor Insurance",
+    image: MotorInsurance,
+    category: "insurance-services",
+    detail: "We ensure you vehicles gets insured. "
+  },
+  {
+    title: "Health Insurance",
+    image: HealthInsurance,
+    category: "insurance-services",
+    detail: "We ensure you get good health policy. "
+  },
+  {
+    title: "Travel Insurance",
+    image: TravelInsurance,
+    category: "insurance-services",
+    detail: "We ensure your travels remain protected. "
+  },
+  {
+    title: "Property Insurance",
+    image: PropertyInsurance,
+    category: "insurance-services",
+    detail: "We ensure your property gets insured. "
+  },
+  {
+    title: "Mobile Insurance",
+    image: MobileInsurance,
+    category: "insurance-services",
+    detail: "We ensure your mobile gets insured. "
   },
 
 

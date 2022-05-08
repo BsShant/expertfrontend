@@ -13,7 +13,7 @@ const ServiceItem = (props) => {
     const { image, title, detail } = props
     return (
         <div className="service-item-container" data-aos="fade-up"
-            data-aos-easing="ease-in-sine">
+            data-aos-easing="ease-in-sine"  data-aos-offset="0">
             <div className="service-item-image">
                 <Link to="/our-services/service-page">
                     <img src={image} alt="Services" />

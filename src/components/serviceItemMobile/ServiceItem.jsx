@@ -21,7 +21,7 @@ const ServiceItemMobile = (props) => {
             </div>
           
             <div className="service-name-box">
-                <div className="service-name">{category}</div>
+                <div className="service-name">{category.replace("-"," ")}</div>
                 <div className="service-item-button">
                     <Link className='primary-button' to={`/our-services/${category}`}>Explore</Link>
                 </div>

@@ -35,12 +35,6 @@ const categories = [
 
 
   {
-    image: Advocacy,
-    category: "legal-services",
-  },
-
-
-  {
 
     image: ITImage,
     category: "it-services",

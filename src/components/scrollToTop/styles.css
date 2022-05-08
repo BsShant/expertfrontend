@@ -154,7 +154,10 @@ a:hover .cursor {
 }
 @media (max-width: 448px) {
   .ant-modal-content{
-    width: 95%;
+    width: 100%;
+  }
+  .ant-modal-body {
+    padding: 11px;
   }
 }
 

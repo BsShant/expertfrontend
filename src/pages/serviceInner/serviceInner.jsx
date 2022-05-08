@@ -2,6 +2,10 @@ import React from 'react'
 import './styles.css'
 import ClimateChange from '../../assets/images/climateChange.jpeg'
 import Registration from '../../assets/images/registration.jpg'
+import Esewa from '../../assets/images/esewa.png'
+import Khalti from '../../assets/images/khalti.png'
+import ImePay from '../../assets/images/imePay.png'
+import RedPanda from '../../assets/images/redPanda.jpg'
 
 const ServiceInner = () => {
     return (
@@ -9,7 +13,7 @@ const ServiceInner = () => {
             <div className="container">
                 <div className="service-inner-page-inner-container">
                     <div className="row">
-                        <div className="col-lg-7" style={{marginBottom:"40px"}}>
+                        <div className="col-lg-7" style={{ marginBottom: "40px" }}>
                             <div className="service-inner-page-image-container">
                                 <img src={Registration} alt="Service" />
                             </div>
@@ -36,7 +40,23 @@ const ServiceInner = () => {
                             </div>
                             <div className="service-price">Rs. 12000 for full package</div>
                             <div className="support-container">
-                            <a href="/our-services" class="btn-flip" data-back="+ PURCHASE" data-front="+ PURCHASE"></a>
+                                <a href="/our-services" class="btn-flip" data-back="+ PURCHASE" data-front="+ PURCHASE"></a>
+                            </div>
+                            <div className="service-we-accept-container">
+                                <div className="we-accept-heading">
+                                    We accept
+                                </div>
+                                <div className="service-we-accept">
+                                    <div className="esewa">
+                                        <img src={Esewa} alt="Esewa" />
+                                    </div>
+                                    <div className="service-khalti">
+                                        <img src={Khalti} alt="Khalti" />
+                                    </div>
+                                    <div className="service-ime-pay">
+                                        <img src={ImePay} alt="Ime Pay" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

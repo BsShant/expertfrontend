@@ -1,10 +1,11 @@
 import React from 'react'
 import './styles.css';
-import Logo from "../../assets/images/logo.png";
+import Logo from "../../assets/images/expertBright.png";
 import { Link } from 'react-router-dom';
 import { brands } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faMapMarker, faPhone, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+import Bottom from '../bottom/Bottom';
 
 const EasyFooter = () => {
     return (
@@ -43,7 +44,7 @@ const EasyFooter = () => {
                                     <div class="footer-contact-info">
                                         <div className="footer-info-box">
                                             <FontAwesomeIcon icon={faEnvelope} style={{ color: "#1496d1", marginRight: "5px" }} />
-                                            <span>  info@easyventure.com</span>
+                                            <span>  info@expertBusiness.com</span>
                                         </div>
                                         <div className="footer-info-box">
                                             <FontAwesomeIcon icon={faPhoneAlt} style={{ color: "#1496d1", marginRight: "5px" }} />
@@ -56,7 +57,7 @@ const EasyFooter = () => {
 
                                         </div>
                                     </div>
-                                    <div class="social-media-links footer-align">
+                                    <div class="social-media-links footer-align  mb-3">
                                         <a class="social-media-link social-media-link--facebook" href="#">
                                             <FontAwesomeIcon icon={brands("facebook-f")} style={{ color: "white", zIndex: "1" }} />
                                         </a>
@@ -74,11 +75,17 @@ const EasyFooter = () => {
                                         </a>
                                     </div>
                                 </div>
+                                <div className="col-12 privacy-link mb-2">
+                                    <div><a href="#">Privacy Policy</a></div>
+                                    <div><a href="#">Terms & Conditions</a></div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <Bottom />
         </footer>
     )
 }

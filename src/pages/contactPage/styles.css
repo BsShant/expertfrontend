@@ -11,6 +11,19 @@
   width: 70%;
   margin: auto;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .contact-page-inner-container{
+    width: 93%!important;
+  }
+  
+}
+@media (max-width: 992px) {
+  .contact-page-inner-container{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+}
 .contact-page-container .ant-form-item-required {
   color: white !important;
 }
