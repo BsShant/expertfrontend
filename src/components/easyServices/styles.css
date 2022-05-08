@@ -141,6 +141,7 @@
   .work-card {
     position: relative;
     overflow: hidden;
+    cursor: pointer;
   }
   
   .work-card:hover .work-card-overlay {

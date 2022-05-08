@@ -9,14 +9,19 @@ import ReactImg from '../../images/tech/react.png'
 import Rails from '../../images/tech/rails.png'
 import Apple from '../../images/tech/apple.png'
 import Node from '../../images/tech/node.png'
-import {Link} from 'react-router-dom'
+import { Link, Navigate, NavLink, useNavigate } from 'react-router-dom'
 import SalesImage from '../../assets/images/sales.png'
 import JobRecruitment from '../../assets/images/jobRecruitment.png';
 import JobPaucha from '../../assets/images/jobPaucha.png'
 import Insurance from '../../assets/images/insurance.png'
 import ExpertTraning from '../../assets/images/expertTraining.png'
 import ExpertServices from '../../assets/images/expertBusiness.png'
+import { useDispatch } from 'react-redux'
+import { setSelectedCategory } from '../../store/categoryReducer/categoryStore.actions'
 const EasyServices = () => {
+    const dispatch = useDispatch()
+
+    const navigate = useNavigate()
     return (
 
         <section class="work-section section">
@@ -29,7 +34,10 @@ const EasyServices = () => {
                 <div class="work-container" data-aos="fade-up">
                     <div class="row">
                         <div class="col-sm-12 col-md-4">
-                            <Link to="/our-services/service-page" >
+                            <div onClick={() => {
+                                dispatch(setSelectedCategory('financial-services'))
+                                navigate('/our-services')
+                            }} >
                                 <div class="work-card">
                                     <img src={Work1} alt="" width="100%" />
                                     <div class="work-card-overlay">
@@ -39,10 +47,13 @@ const EasyServices = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </Link>
+                            </div>
                         </div>
                         <div class="col-sm-12 col-md-4">
-                            <Link to="/our-services/service-page" >
+                            <div onClick={() => {
+                                dispatch(setSelectedCategory('legal-services'))
+                                navigate('/our-services')
+                            }} >
 
                                 <div class="work-card">
                                     <img src={Work3} alt="" width="100%" />
@@ -53,63 +64,75 @@ const EasyServices = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </Link>
+                            </div>
                         </div>
                         <div class="col-sm-12 col-md-4">
-                            <Link to="/our-services/service-page" >
+                            <div onClick={() => {
+                                dispatch(setSelectedCategory('security-services'))
+                                navigate('/our-services')
+                            }} >
 
                                 <div class="work-card">
                                     <img src={Work2} alt="" width="100%" />
                                     <div class="work-card-overlay">
                                         <div class="card-content">
-                                            <h3>Consulting Services</h3>
+                                            <h3>Security Services</h3>
                                             {/* <h5>Websites</h5> */}
                                         </div>
                                     </div>
                                 </div>
-                            </Link>
+                            </div>
                         </div>
                         <div class=" col-sm-12 col-md-4">
-                            <Link to="/our-services/service-page" >
+                            <div onClick={() => {
+                                dispatch(setSelectedCategory('it-services'))
+                                navigate('/our-services')
+                            }} >
                                 <div class="work-card">
                                     <img src={Work3} alt="" width="100%" />
                                     <div class="work-card-overlay">
                                         <div class="card-content">
-                                            <h3>IT service</h3>
+                                            <h3>IT services</h3>
                                             {/* <h5>Websites</h5> */}
                                         </div>
                                     </div>
                                 </div>
-                            </Link>
+                            </div>
                         </div>
                         <div class="col-sm-12 col-md-4">
-                            <Link to="/our-services/service-page" >
+                            <div onClick={() => {
+                                dispatch(setSelectedCategory('insurance-services'))
+                                navigate('/our-services')
+                            }} >
                                 <div class="work-card">
                                     <img src={Work2} alt="" width="100%" />
                                     <div class="work-card-overlay">
                                         <div class="card-content">
-                                            <h3>Linguistic Services</h3>
+                                            <h3>Insurance Services</h3>
                                             {/* <h5>Websites</h5> */}
                                         </div>
                                     </div>
                                 </div>
-                            </Link>
+                            </div>
                         </div>
                         <div class="col-sm-12 col-md-4">
-                            <Link to="/our-services/service-page" >
+                            <div onClick={() => {
+                                dispatch(setSelectedCategory('financial-services'))
+                                navigate('/our-services')
+                            }} >
                                 <div class="work-card">
                                     <img src={Work1} alt="" width="100%" />
                                     <div class="work-card-overlay">
                                         <div class="card-content">
-                                            <h3>Marketing Services</h3>
+                                            <h3>Financial Services</h3>
                                             {/* <h5>Websites</h5> */}
                                         </div>
                                     </div>
                                 </div>
-                            </Link>
+                            </div>
                         </div>
                     </div>
-                    <a href="/our-services" class="btn-flip" data-back="+ VIEW MORE" data-front="+ VIEW MORE"></a>
+                    <Link to="/our-services" class="btn-flip" data-back="+ VIEW MORE" data-front="+ VIEW MORE"></Link>
                 </div>
             </div>
 

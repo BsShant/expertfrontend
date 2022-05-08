@@ -32,16 +32,17 @@ const ContactPage = () => {
                 </div>
                 <div className="contact-info">
                   <div className="contact-text">
-                    info@expertBusiness.com
+                    mahesh.expertbusiness@gmail.com
                   </div>
                   <div className="contact-text">
                     P.O. Box 12345
                   </div>
                   <div className="contact-text">
-                    01-5286235 01-4467123
+                    o1-4106886, +9779828725576
                   </div>
                   <div className="contact-text">
-                    Kathmandu, Bagmati, 44600
+                    Tinkune(Gairigaun), Kathmandu, Nepal
+                  
                   </div>
                 </div>
                 <div className="contact-page-social-media">
@@ -85,7 +86,7 @@ const ContactPage = () => {
                     },
                   ]}
                 >
-                  <Input  onChange={(e) => { setInputName(e.target.value) }}/>
+                  <Input onChange={(e) => { setInputName(e.target.value) }} />
                   <div className={`artificial-label ${inputName.length > 0 ? 'labelOff' : ""}`}>Name</div>
                 </Form.Item>
                 <Form.Item
@@ -100,7 +101,7 @@ const ContactPage = () => {
                     },
                   ]}
                 >
-                  <Input  onChange={(e) => { setInputAddress(e.target.value) }}/>
+                  <Input onChange={(e) => { setInputAddress(e.target.value) }} />
                   <div className={`artificial-label ${inputAddress.length > 0 ? 'labelOff' : ""}`}>Address</div>
 
                 </Form.Item>
@@ -117,7 +118,7 @@ const ContactPage = () => {
                     },
                   ]}
                 >
-                  <Input  onChange={(e) => { setInputPhone(e.target.value) }} />
+                  <Input onChange={(e) => { setInputPhone(e.target.value) }} />
                   <div className={`artificial-label ${inputPhone.length > 0 ? 'labelOff' : ""}`}>Phone</div>
 
                 </Form.Item>

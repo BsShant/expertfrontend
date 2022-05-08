@@ -16,7 +16,7 @@ const EasyFooter = () => {
                     <div class="row" style={{ height: "100%" }}>
                         <div class="col-sm-12 col-md-5 footer-bottom" style={{ position: "relative" }}>
                             <div className="row">
-                                <h3 class="col-12 order-2 order-md-1 footer-about-text">We <span>collabrate</span> with ambitious
+                                <h3 class="col-12 order-2 order-md-1 footer-about-text"><span>We</span> collabrate with ambitious
                                     brands and people. Let's build something great together.
                                 </h3>
                                 {/* <img src="logo/logo-white.svg" alt="" width="167px" class="mt-2" /> */}
@@ -47,16 +47,16 @@ const EasyFooter = () => {
                                     <div class="footer-contact-info">
                                         <div className="footer-info-box">
                                             <FontAwesomeIcon icon={faEnvelope} style={{ color: "#1496d1", marginRight: "5px" }} />
-                                            <span>  info@expertBusiness.com</span>
+                                            <span>  mahesh.expertbusiness@gmail.com</span>
                                         </div>
                                         <div className="footer-info-box">
                                             <FontAwesomeIcon icon={faPhoneAlt} style={{ color: "#1496d1", marginRight: "5px" }} />
-                                            <span>  +9779800000000, 015286235</span>
+                                            <span>  01-4106886, +9779828725576</span>
 
                                         </div>
                                         <div className="footer-info-box">
                                             <FontAwesomeIcon icon={faMapMarker} style={{ color: "#1496d1", marginRight: "5px" }} />
-                                            <span>  Hongkong, Kathmandu</span>
+                                            <span> Tinkune(Gairigaun), Kathmandu, Nepal</span>
 
                                         </div>
                                     </div>

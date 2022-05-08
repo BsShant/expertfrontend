@@ -9,6 +9,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Talking from '../../assets/images/talking.gif'
 import OurProductsNew from "../ourProductsNew/OurProducts";
+import { Link } from "react-router-dom";
 const AboutUsSection = () => {
     return (
         <section className="about-us-section-container snap-y">
@@ -22,7 +23,7 @@ const AboutUsSection = () => {
                 </h1>
             </div>
             <div class="about-container">
-                <a href="#" class="btn-flip" data-back="+ VIEW MORE" data-front="+ VIEW MORE" data-aos="fade-up"></a>
+                <Link to="/about-us" class="btn-flip" data-back="+ VIEW MORE" data-front="+ VIEW MORE" data-aos="fade-up"></Link>
                 <div class="row" style={{height: "100%"}}>
                     <div class="col-sm-12 col-md-6 my-auto">
                         <div class="about-title fade-right" data-aos="fade-right">
