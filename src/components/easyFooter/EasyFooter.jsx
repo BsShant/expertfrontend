@@ -33,10 +33,13 @@ const EasyFooter = () => {
                                     <div className='links-inner'>
                                         <h4>LINKS</h4>
                                         <ul>
-                                            <li> <a href="#">About Us</a></li>
-                                            <li><a href="#">Contact Us</a></li>
-                                            <li><a href="#">Privacy Policy</a></li>
-                                            <li><a href="#">Terms & Conditions</a></li>
+                                            {/* <li> <Link to="/">Home</Link></li> */}
+                                            <li><Link to="/our-services">Our Services</Link></li>
+                                            <li><Link to="/our-products">Our Products</Link></li>
+                                            <li><Link to="/fund-raiser">Fund Raiser</Link></li>
+                                            <li><Link to="/about-us">About Us</Link></li>
+                                            <li><Link to="/contact-us">Contact Us</Link></li>
+
                                         </ul>
                                     </div>
                                 </div>

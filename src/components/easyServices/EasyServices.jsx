@@ -23,7 +23,7 @@ const EasyServices = () => {
             <div class="container">
                 <div class="section-title">
                     <h1>
-                        WORK
+                        SERVICES
                     </h1>
                 </div>
                 <div class="work-container" data-aos="fade-up">
