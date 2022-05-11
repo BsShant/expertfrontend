@@ -56,7 +56,7 @@ const ServiceInner = () => {
                         </div>
                         <div className="col-12 order-2 order-lg-3 mt-5 mb-5">
                         <div className="service-inner-page-heading mb-2">{title.replaceAll("-", " ")}</div>
-
+ 
                             <div className="service-inner-page-text">
                                 Financial planning is the practice of putting together a plan for your future,
                                 specifically around how you will manage your finances and prepare for all of the
