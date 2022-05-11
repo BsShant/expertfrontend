@@ -1,47 +1,62 @@
 .service-inner-page-container {
   min-height: 100vh;
-  /* background: #2b9123; */
-  padding: 60px 0;
-}
-.service-inner-page-inner-container {
+  padding: 30px 0 60px;
 }
 
+.service-inner-page-inner-container {}
+
 .service-inner-page-image-container {
-  margin-bottom: 30px;
+  display: flex;
+  justify-content: flex-start;
 }
+
+@media (max-width: 992px) {
+  .service-inner-page-image-container {
+    justify-content: center !important;
+  }
+  .service-inner-page-image-container img{
+    width: 100%!important;
+  }
+}
+
 .service-inner-page-image-container img {
-  width: 100%;
+  width: 80%;
+  height: 390px;
   object-fit: cover;
-  aspect-ratio: 5/3;
 }
+
 .service-inner-page-text {
-  /* color: white; */
+  font-family: nova-light;
 }
+
 .service-inner-page-heading {
-  font-size: 28px;
-  /* color: white; */
+  font-size: 22px;
+  text-transform: capitalize;
+  font-family: nova-bold;
 }
+
 .service-price {
-  /* color: white; */
   font-size: 18px;
   margin-bottom: 25px;
+  font-family: nova-light;
 }
 
 .keypoints-container {
   margin-top: 20px;
   margin-bottom: 10px;
 }
+
 .key-points-title {
-  font-size: 18px;
-  /* color: white; */
+  font-size: 16px;
+  font-family: nova-light;
+  margin-bottom: 5px;
+
 }
-.key-points-list {
-}
-.key-point-list-item {
-  /* color: white; */
-}
+
+.key-points-list {}
+
+
 .service-inner-page-about-heading {
-  /* color: white; */
   font-size: 18px;
 }
 
@@ -49,37 +64,56 @@
 .service-we-accept-container {
   margin-top: 20px;
 }
+
 .service-we-accept {
   display: flex;
 }
+
 .service-we-accept-heading {
   font-size: 18px;
   font-family: nova-light;
 }
+
 .service-we-accept div {
   height: 35px;
   overflow: hidden;
   position: relative;
 }
+
 .service-we-accept div:not(:last-child) {
   margin-right: 2px;
 }
-.service-esewa {
-}
+
+.service-esewa {}
+
 .service-esewa img {
   width: 25px;
 }
-.service-khalti {
-}
+
+.service-khalti {}
+
 .service-khalti img {
   width: 35px;
 }
+
 .service-ime-pay {
   width: 73px;
 }
+
 .service-ime-pay img {
   width: 90px;
   position: absolute;
   top: -18px;
   left: -13px;
+}
+
+.service-inner-header {
+  /* display: none; */
+  font-size: 22px;
+  font-family: nova-bold;
+  text-transform: capitalize;
+}
+
+@media (max-width: 992px) {
+  
 }

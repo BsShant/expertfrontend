@@ -117,14 +117,14 @@ const EasyServices = () => {
                         </div>
                         <div class="col-sm-12 col-md-4">
                             <div onClick={() => {
-                                dispatch(setSelectedCategory('financial-services'))
+                                dispatch(setSelectedCategory('loan-services'))
                                 navigate('/our-services')
                             }} >
                                 <div class="work-card">
                                     <img src={Work1} alt="" width="100%" />
                                     <div class="work-card-overlay">
                                         <div class="card-content">
-                                            <h3>Financial Services</h3>
+                                            <h3>Loan Services</h3>
                                             {/* <h5>Websites</h5> */}
                                         </div>
                                     </div>

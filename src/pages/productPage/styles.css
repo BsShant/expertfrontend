@@ -19,6 +19,11 @@
 }
 
 .our-products-top-half {
+  /* background-image: url("../../assets/images/productBg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
 }
 @media (max-width: 992px) {
   .our-products-top-half {
@@ -55,5 +60,6 @@
 }
 .products-upper-half-image img {
   max-width: 100%;
-  transform: rotate(30deg);
+  margin-bottom: 10px;
+  /* transform: rotate(30deg); */
 }

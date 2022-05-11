@@ -65,14 +65,14 @@
   justify-content: flex-end;
 }
 
-.contact-page-container .label-absolute .ant-form-item-label {
+/* .contact-page-container .label-absolute .ant-form-item-label {
   position: absolute !important;
   top: 8px;
   z-index: 1;
   transition: all 250ms ease-in-out;
   color: white;
   left: 2px;
-}
+} */
 .contact-page-container .ant-form-item-required {
   color: white;
 }
@@ -87,11 +87,7 @@
   border-bottom: 1px solid #ccc;
   background-color: transparent;
 }
-.label-absolute input:focus .artificial-label,
-.label-absolute input:active .artificial-label,
-.label-absolute input:focus-visible .artificial-label {
-  display: none;
-}
+
 .contact-page-container input:focus ~.artificial-label {
   display: none;
 }
@@ -100,17 +96,6 @@
   top: 8px;
   left: 2px;
   color:white
-}
-.ant-row.ant-form-item.label-absolute:focus .ant-form-item-label {
-  display: none !important;
-}
-
-.contact-page-container
-  .label-absolute
-  input:focus
-  .label-absolute
-  .ant-form-item-label {
-  top: -15px !important;
 }
 
 .contact-page-container .ant-form-item {

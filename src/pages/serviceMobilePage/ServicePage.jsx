@@ -12,6 +12,7 @@ import CategoriesSider from '../../components/categoriesSider/CategoriesSider';
 import Tax from '../../assets/images/tax.jpg'
 import LoanManagement from '../../assets/images/loan.jpg'
 import Cyber from '../../assets/images/cyber.jpeg'
+import Loans from '../../assets/images/personalLoan.jpg'
 import ITImage from '../../assets/images/it.jpeg'
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -26,7 +27,11 @@ const categories = [
     category: "financial-services",
   },
 
+  {
+    image: Loans,
+    category: "loan-services",
 
+  },
   {
     image: Registration,
     category: "legal-services",
@@ -64,7 +69,7 @@ const ServicePageMobile = () => {
   return (
     <div className='mobile-service-page-container'>
       <div className="container" style={{ display: "flex" }}>
-        
+
         <div className="service-page-inner-container">
 
           <div className="category-inner-body">

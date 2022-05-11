@@ -134,13 +134,13 @@ a:hover .cursor {
   font-family: roboto;
 }
 
-.ant-modal-body {
+.login-wrap .ant-modal-body {
   border-radius: 10px;
   -webkit-border-radius: 10px !important;
   -moz-border-radius: 10px !important;
   border-radius: 10px !important;
 }
-.ant-modal-content {
+.login-wrap .ant-modal-content {
   overflow: auto;
   border-radius: 14px;
   width: 70%;
@@ -148,15 +148,15 @@ a:hover .cursor {
   padding: 30px 0;
 }
 @media (min-width: 448px) and (max-width: 532px) {
-  .ant-modal-content{
+  .login-wrap .ant-modal-content{
     width: 80%;
   }
 }
 @media (max-width: 448px) {
-  .ant-modal-content{
+  .login-wrap .ant-modal-content{
     width: 100%;
   }
-  .ant-modal-body {
+  .login-wrap .ant-modal-body {
     padding: 11px;
   }
 }

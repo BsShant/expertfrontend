@@ -15,14 +15,9 @@ const FundRaiserPage = () => {
                 <div className="fund-raiser-page-inner-container">
 
                     <div className="featured-project">
-                        {/* <div className="latest-projects-header">
-                           Our Featued Project
-                        </div> */}
+                      
                         <div className="fund-raiser-heading col-md-12">
                             <div className="fund-raiser-header">Fund Our Projects</div>
-                            {/* <div className="fund-raiser-para">
-                           Fund raisers are dedicated to those projects which helps the community we operate in.
-                        </div> */}
                         </div>
                         <div className="row">
                             <div className="col-md-6 order-md-2">

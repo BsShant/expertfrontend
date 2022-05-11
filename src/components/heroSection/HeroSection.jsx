@@ -33,7 +33,7 @@ const HeroSection = () => {
                 <div className="hero-inner-container">
                     <div className="hero-text">
                         <div className="row" style={{ height: "100%" }}>
-                            <div className="hero-text-container col-lg-6 col-12 order-lg-1 order-2" style={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
+                            <div className="hero-text-container order-2 order-md-1 col-lg-6 col-12 order-lg-1 order-2" style={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
                                 <h2 className="hero-title" data-aos="fade-down"
                                     data-aos-easing="ease-in-sine">
                                     We Are <br />
@@ -68,7 +68,7 @@ const HeroSection = () => {
                                     <canvas style={{ width: "640px", height: "653px" }} tabindex="0" width="640" height="653"></canvas>
                                 </div>
                             </div> */}
-                            <div className="col-lg-6 order-1 order-lg-2" style={{height:"calc(100vh - 90px)"}}>
+                            <div className="col-lg-6 order-1 order-md-2" style={{height:"calc(100vh - 90px)"}}>
                                 <Canvas camera={{zoom:2.5 ,position:[-50, 100, 600], fov:28, near: 20, far:1000000, rotateY:45/180*Math.PI}}>
                                     <ambientLight intensity={1} />
                                     <Suspense fallback={null}>

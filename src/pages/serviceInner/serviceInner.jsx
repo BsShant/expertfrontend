@@ -1,42 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './styles.css'
-import ClimateChange from '../../assets/images/climateChange.jpeg'
 import Registration from '../../assets/images/registration.jpg'
 import Esewa from '../../assets/images/esewa.png'
 import Khalti from '../../assets/images/khalti.png'
 import ImePay from '../../assets/images/imePay.png'
-import RedPanda from '../../assets/images/redPanda.jpg'
+import { useParams } from 'react-router-dom'
+import ServiceInnerLoan from './ServiceInnerLoan'
+import ServiceList from '../../components/serviceList/ServiceList'
+import { services } from '../../assets/dummy/services'
 
 const ServiceInner = () => {
+    const { category, title } = useParams()
+    const [myService, setMyService] = useState(services.find(serv => title === serv.title.toLowerCase().replaceAll(" ", "-")))
     return (
         <div className='service-inner-page-container'>
             <div className="container">
                 <div className="service-inner-page-inner-container">
-                    <div className="row">
-                        <div className="col-lg-7" style={{ marginBottom: "40px" }}>
+                    {category === 'loan-services' ? <ServiceInnerLoan category={category} title={title} /> : <div className="row">
+                        <div className="col-lg-7 order-1 order-lg-1" style={{ marginBottom: "10px" }}>
+                            {/* <div className="service-inner-header mb-3">
+                                {title.replaceAll("-", " ")}
+                            </div> */}
                             <div className="service-inner-page-image-container">
-                                <img src={Registration} alt="Service" />
-                            </div>
-                            <div className="service-inner-page-heading">Registration, Update, Renew and Close</div>
-                            <div className="service-inner-page-text">
-                                This service-inner aims to plant thousand trees
-                                as well as create awareness and motivation for carbon net zero.
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                when an unknown printer took a galley of type and Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-
+                                <img src={myService.image} alt="Service" />
                             </div>
                         </div>
-                        <div className="col-lg-5">
-                            <div className="service-inner-page-heading col-lg-12">Registration, Update, Renew and Close</div>
+                        <div className="col-lg-5 order-3 order-lg-2">
+                            <div className="service-inner-page-heading col-lg-12">Package Info</div>
                             <div className="keypoints-container">
                                 <div className="key-points-title">Key Points</div>
-                                <div className="key-points-list">
-                                    <div className="key-point-list-item">-> Fast registration</div>
-                                    <div className="key-point-list-item">-> Less legal issues</div>
-                                    <div className="key-point-list-item">-> Reliable legal partners</div>
-
-
-                                </div>
+                                <ServiceList point='Fast Registration' />
+                                <ServiceList point='Reliable Experts' />
+                                <ServiceList point='24 hours customer service' />
                             </div>
                             <div className="service-price">Rs. 12000 for full package</div>
                             <div className="support-container">
@@ -59,10 +54,29 @@ const ServiceInner = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className="col-12 order-2 order-lg-3 mt-5 mb-5">
+                        <div className="service-inner-page-heading mb-2">{title.replaceAll("-", " ")}</div>
+
+                            <div className="service-inner-page-text">
+                                Financial planning is the practice of putting together a plan for your future,
+                                specifically around how you will manage your finances and prepare for all of the
+                                potential costs and issues that may arise. The process involves evaluating your
+                                current financial situation, identifying your goals and then developing and
+                                implementing relevant recommendations.
+
+                                Financial planning is holistic and broad,
+                                and it can encompass a variety of services, which we detail below.
+                                Rather than focusing on a single aspect of your finances, it views clients as real
+                                people with a variety of goals and responsibilities. It then addresses a number of financial
+                                realities to figure out how to best enable people to make the most of their lives
+
+                            </div>
+                        </div>
                     </div>
+                    }
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

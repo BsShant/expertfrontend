@@ -37,7 +37,7 @@ const IndexRoute = () => {
             <Route path="/our-products" element={<ProductPage />} />
             <Route path="/fund-raiser" element={<FundRaiserPage />} />
             <Route path="/fund-raiser/project-page" element={<ProjectPage />} />
-            <Route path="/our-services/service-page" element={<ServiceInner />} />
+            <Route path="/our-services/service-page/:category/:title" element={<ServiceInner />} />
 
             <Route path="/contact-us" element={<ContactPage />} />
             <Route path="/login" element={<Login />} />

@@ -1,0 +1,127 @@
+.inquiry-wrap {}
+
+.inquiry-heading-row {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.inquiry-container {}
+
+.inquiry-heading {
+    font-family: nova-bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.inquiry-sub-heading {
+    font-family: nova-light;
+}
+
+.inquiry-image-container img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.enquiry-input {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+
+.enquiry-input input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.enquiry-input textarea {
+    width: 100%;
+    border: 1px solid black;
+
+}
+.enquiry-input textarea:focus{
+    border: 1px solid black;
+}
+.enquiry-input textarea:focus-visible{
+    border: 1px solid black;
+    outline: none;
+}
+.textarea-input {
+    margin-top: 50px;
+}
+
+
+.enquiry-input input:active {
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.enquiry-input input:focus-visible {
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+
+.enquiry-label {
+    position: absolute;
+    color: black;
+    z-index: 2;
+    top: 0;
+    left: 2px;
+}
+
+.textarea-enquiry-label {
+    position: absolute;
+    top: -25px;
+}
+
+.enquiry-input input:focus~.enquiry-label {
+    display: none;
+
+}
+
+.enquiry-label-off {
+    display: none;
+}
+
+.enquiry-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.inquiry-wrap .ant-modal-body {
+    border-radius: 10px;
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    border-radius: 10px !important;
+    padding: 0px 24px!important;
+}
+
+.inquiry-wrap .ant-modal-content {
+    overflow: auto;
+    border-radius: 14px;
+    width: 70%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+@media (min-width: 448px) and (max-width: 532px) {
+    .inquiry-wrap .ant-modal-content {
+        width: 80%;
+    }
+}
+
+@media (max-width: 448px) {
+    .inquiry-wrap .ant-modal-content {
+        width: 100%;
+    }
+
+    .inquiry-wrap .ant-modal-body {
+        padding: 11px;
+    }
+}
+
+.ant-modal-mask {
+    background: rgba(9, 145, 190, 0.4);
+}

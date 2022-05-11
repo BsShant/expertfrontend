@@ -42,6 +42,11 @@ const CategoriesSider = (props) => {
                             Financial Services
                         </Menu.Item>
                         <Menu.Item
+                            key="loan-services"
+                        >
+                            Loan Services
+                        </Menu.Item>
+                        <Menu.Item
                             key="legal-services"
 
                         >
