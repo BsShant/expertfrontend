@@ -16,12 +16,12 @@ const ScrollToTop = (props) => {
   const [login, setLogin] = useState(true)
   useEffect(() => {
 
-    var cursor = document.getElementById("cursor");
-    document.body.addEventListener("mousemove", function (e) {
-      (cursor.style.left = e.clientX + "px");
-      (cursor.style.top = e.clientY + "px");
-    });
-    var ali = document.querySelectorAll("a")
+    // var cursor = document.getElementById("cursor");
+    // document.body.addEventListener("mousemove", function (e) {
+    //   (cursor.style.left = e.clientX + "px");
+    //   (cursor.style.top = e.clientY + "px");
+    // });
+    // var ali = document.querySelectorAll("a")
     // ali.map(a=>{
     //   console.log("shshsh",a)
     // })

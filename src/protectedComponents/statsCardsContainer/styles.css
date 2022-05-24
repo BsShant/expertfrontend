@@ -1,0 +1,14 @@
+@media (min-width: 400px) and (max-width:576px) {
+    .stats-row{
+        width: 75%;
+        margin: auto;
+    }
+    
+}
+@media (min-width: 768px){
+    .stats-row{
+        width: 75%;
+        margin: auto;
+    }
+    
+}

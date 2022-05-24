@@ -1,0 +1,135 @@
+.service-stats-container {
+  margin-bottom: 30px !important;
+}
+.service-stats-heading {
+  font-family: nova-bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: darkgrey;
+  display: flex;
+  justify-content: center;
+}
+.visitor-stats-container {
+  margin-bottom: 30px !important;
+}
+.visitor-stats-heading {
+  margin-bottom: 20px;
+  font-family: nova-bold;
+  font-size: 18px;
+  color: darkgrey;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+.visitor-doughnut-stats-container {
+}
+.visitor-doughnut-stats-heading {
+  margin-bottom: 20px;
+  font-family: nova-bold;
+  font-size: 18px;
+  color: darkgrey;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.data-container {
+  margin-bottom: 30px;
+}
+.data-heading {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.data-box {
+  display: flex;
+  padding-left: 20px;
+  border-left: 3px solid #1496d1;
+}
+
+.data-box input {
+  border: none;
+  outline: none;
+  width: 80%;
+}
+
+.data-box input:focus-visible {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+.data-box textarea {
+  border: none;
+  outline: none;
+  width: 80%;
+  margin-right: 53px;
+  background: #8080800a;
+}
+
+.data-box textarea:focus-visible {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+.admin-button {
+  background-color: #1496d1;
+  color: white;
+  border: none;
+  width: 70px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+
+.update-button {
+  background-color: #1496d1;
+  color: white;
+  border: none;
+  width: 70px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-top: 20px;
+}
+
+.choose-button {
+  background-color: #1496d1;
+  color: white;
+  border: none;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.table-button {
+  background-color: #1496d1;
+  color: white;
+  border: none;
+  width: 60px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.admin-sub-heading {
+  margin-bottom: 20px;
+  color: #1496d1;
+  text-transform: capitalize;
+}
+.admin-header {
+  font-family: nova-bold;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+.admin-inner-section {
+    margin-bottom: 50px;
+}

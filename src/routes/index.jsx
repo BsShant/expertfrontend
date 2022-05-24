@@ -20,6 +20,7 @@ import ServiceInner from "../pages/serviceInner/serviceInner";
 import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 import Login from "../pages/login/Login";
 import ServicePageInner from "../pages/servicePageInner/ServicePage";
+import Admin from "../protectedPages/admin/Admin";
 const IndexRoute = () => {
 
   return (
@@ -32,8 +33,6 @@ const IndexRoute = () => {
               <Outlet />
             </PublicLayout>
           }>
-
-
             <Route path="/our-products" element={<ProductPage />} />
             <Route path="/fund-raiser" element={<FundRaiserPage />} />
             <Route path="/fund-raiser/project-page" element={<ProjectPage />} />
@@ -42,9 +41,6 @@ const IndexRoute = () => {
             <Route path="/contact-us" element={<ContactPage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/our-services/:category" element={<ServicePageInner />} />
-                        {/* <Route path="/our-services" element={<ServicePage />} /> */}
-
-
           </Route>
 
           <Route path="/" element={<LandingPage />} />
@@ -55,9 +51,9 @@ const IndexRoute = () => {
             </CategoryLayout>
           }>
             <Route path="/our-services" element={<ServicePage />} />
-            
-
           </Route>
+          
+          <Route path="/admin" element={<Admin />} />
         </Routes >
       </ScrollToTop>
     </>
