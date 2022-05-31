@@ -2,6 +2,7 @@ import { message, Table } from "antd";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchingServiceCategoryStarts } from "../../store/categoryReducer/categoryStore.actions";
+import { fetchingLoanFactorsStarts } from "../../store/loanReducer/loanStore.actions";
 import { server } from "../../utils/fetch";
 import DataInputModal from "../dataInputmodal/DataInputModal";
 import LoanFactorData from "../loanFactorData/LoanFactorData";
@@ -10,15 +11,15 @@ import "./styles.css";
 const LoanFactorTable = () => {
   let url = `${server}/loanFactors`;
   const dispatch = useDispatch();
-  const serviceCategory = useSelector(
-    (state) => state.categoryStore.serviceCategory
+  const loanFactors = useSelector(
+    (state) => state.loanStore.loanFactors
   );
   const [loanFactorEditModalVisible, setLoanFactorEditModalVisible] =
     useState(false);
   const [selectedLoanFactor, setSelectedLoanFactor] = useState({});
   const tableItemEdit = (record) => {
     setSelectedLoanFactor(
-      serviceCategory.find((data) => data.id == record.id)
+      loanFactors.find((data) => data.id == record.id)
     );
     setLoanFactorEditModalVisible(true);
   };
@@ -32,7 +33,7 @@ const LoanFactorTable = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        dispatch(fetchingServiceCategoryStarts());
+        dispatch(fetchingLoanFactorsStarts());
         console.log("Deleteing Loan Factor Success");
         message.success("Loan Factor Deleted!");
       })
@@ -89,7 +90,7 @@ const LoanFactorTable = () => {
   ];
   return (
     <div>
-      <Table dataSource={serviceCategory} columns={columns} />
+      <Table dataSource={loanFactors} columns={columns}/>
       <DataInputModal
         setDataModalVisible={setLoanFactorEditModalVisible}
         dataModalVisible={loanFactorEditModalVisible}

@@ -1,26 +1,35 @@
 import { message } from "antd";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useSelector } from "react-redux";
 import { server } from "../../utils/fetch";
 import AdminTextArea from "../adminTextArea/AdminTextArea";
 import ImageUploadModal from "../imageUploadModal/ImageUploadModal";
 const ProductHero = () => {
-  let url = `${server}/landingAbout/text`;
-
+  let url = `${server}/productHero/text`;
+  const productHero = useSelector((state) => state.productStore.productHero);
   const [productHeroValues, setProductHeroValues] = useState({
-    heading: "",
-    subHeading: "",
-    detail: "",
+    heading: productHero ? productHero.heading : "",
+    blueSpan: productHero ? productHero.blueSpan : "",
+    detail: productHero ? productHero.detail : "",
   });
   const [productHeroTextEdit, setProductHeroTextEdit] = useState({
     headingEdit: false,
-    subHeadingEdit: false,
+    blueSpanEdit: false,
     detailEdit: false,
   });
 
   const productHeroHeadingRef = useRef(null);
   const productHeroDetailRef = useRef(null);
-  const productHeroSubHeadingRef = useRef(null);
-
+  const productBlueSpanRef = useRef(null);
+  useEffect(() => {
+    if (productHero) {
+      setProductHeroValues({
+        heading: productHero.heading,
+        blueSpan: productHero.blueSpan,
+        detail: productHero.detail,
+      });
+    }
+  }, [productHero]);
   const updateDatabase = () => {
     fetch(url, {
       method: "PUT",
@@ -40,9 +49,9 @@ const ProductHero = () => {
       });
   };
   return (
-    <div>
+    <div className="admin-box-container">
       <div className="row">
-        <div className="col-md-8">
+        <div className="col-md-12">
           <div className="admin-sub-heading">Product Hero Section</div>
           <div className="data-container">
             <div className="data-heading">Heading</div>
@@ -60,14 +69,14 @@ const ProductHero = () => {
           <div className="data-container">
             <div className="data-heading">Sub Heading</div>
             <AdminTextArea
-              textAreaRef={productHeroSubHeadingRef}
+              textAreaRef={productBlueSpanRef}
               setTextEdit={setProductHeroTextEdit}
               textEdit={productHeroTextEdit}
               textAreaValue={productHeroValues}
               onTextAreaValueChange={setProductHeroValues}
-              textEditName="subHeadingEdit"
-              textName="subHeading"
-              name="productHeroSubHeading"
+              textEditName="blueSpanEdit"
+              textName="blueSpan"
+              name="productHeroBlueSpan"
             />
           </div>
           <div className="data-container">
@@ -91,7 +100,7 @@ const ProductHero = () => {
             <ImageUploadModal
               name="image"
               imageSection="Product Hero Image"
-              url={`${server}/landingAbout/image`}
+              url={`${server}/productHero/image`}
             />
           </div>
         </div>

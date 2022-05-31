@@ -3,19 +3,23 @@ import DataInputModal from "../../protectedComponents/dataInputmodal/DataInputMo
 import ProductData from "../../protectedComponents/productData/productData";
 import ProductHero from "../../protectedComponents/productHero/ProductHero";
 import ProductTable from "../../protectedComponents/productTable/ProductTable";
+import { useNav } from "../../protectedComponents/UseNav/UseNav";
 
 import { server } from "../../utils/fetch";
 import "./styles.css";
 const ProductPage = () => {
+  const serviceRef = useNav('Product');
+
   const [productModalVisible, setProductModalVisible] = useState(false);
 
   return (
-    <div id="admin-product-section">
+    <div ref={serviceRef} id="ProductContainer">
       <div className="container">
         <div className="admin-product-inner-section">
           <div className="admin-header">Product Page</div>
           <ProductHero />
           <div className="admin-inner-section">
+          <div className="admin-sub-heading">Products</div>
             <button
               className="choose-button"
               onClick={() => setProductModalVisible(true)}

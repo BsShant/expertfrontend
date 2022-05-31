@@ -9,6 +9,8 @@ import { fundRaiserReducer } from "./fundRaiserReducer/fundRaiserStore.reducer";
 import { serviceReducer } from "./serviceReducer/serviceStore.reducer";
 import { productReducer } from "./productReducer/productStore.reducer";
 import { loanReducer } from "./loanReducer/loanStore.reducer";
+import { aboutReducer } from "./aboutReducer/aboutStore.reducer";
+import { footerReducer } from "./footerReducer/footerStore.reducer";
 const persistConfig = {
   key: "root",
   storage,
@@ -23,6 +25,8 @@ const rootReducer = combineReducers({
   serviceStore: serviceReducer,
   productStore: productReducer,
   loanStore: loanReducer,
+  aboutStore: aboutReducer,
+  footerStore: footerReducer,
 });
 
 export default persistReducer(persistConfig, rootReducer);

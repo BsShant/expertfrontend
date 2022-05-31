@@ -4,7 +4,7 @@ import AdminModalTextArea from "../adminModalTextArea/AdminModalTextArea";
 import ImageSelect from "../imageSelect/ImageSelect";
 import "antd/dist/antd.css";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchingServiceCategoryStarts } from "../../store/categoryReducer/categoryStore.actions";
+import { fetchingLoanFactorsStarts } from "../../store/loanReducer/loanStore.actions";
 
 const LoanFactorData = (props) => {
   const { Option } = Select;
@@ -15,8 +15,8 @@ const LoanFactorData = (props) => {
     loanType: "",
     image: "",
   });
-  const serviceCategory = useSelector(
-    (state) => state.categoryStore.serviceCategory
+  const loanType = useSelector(
+    (state) => state.loanStore.loanType
   );
 
   useEffect(() => {
@@ -49,7 +49,7 @@ const LoanFactorData = (props) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        dispatch(fetchingServiceCategoryStarts());
+        dispatch(fetchingLoanFactorsStarts());
         console.log(
           `Loan Factors ${props.updateData ? "Updated" : "Added"}`
         );
@@ -78,7 +78,7 @@ const LoanFactorData = (props) => {
         <div className="col-md-6">
         <div className="data-heading">Loan Type</div>
           <Select placeholder="Select Loan Type" onChange={onChange}>
-            {serviceCategory.map((category, index) => {
+            {loanType.map((category, index) => {
               return (
                 <Option key={index} value={category.route}>
                   {category.name}

@@ -12,9 +12,12 @@ import ServiceCategoryData from "../../protectedComponents/serviceCategoryData/S
 import ServiceCategoryTable from "../../protectedComponents/serviceCategoryTable/ServiceCategoryTable";
 import ServiceData from "../../protectedComponents/serviceData.jsx/ServiceData";
 import ServiceTable from "../../protectedComponents/serviceTable/serviceTable";
+import { useNav } from "../../protectedComponents/UseNav/UseNav";
 import { server } from "../../utils/fetch";
 import "./styles.css";
 const ServicePage = () => {
+  const serviceRef = useNav('Service');
+
   const [serviceDataModalVisible, setServiceDataModalVisible] = useState(false);
   const [serviceCategoryModalVisible, setServiceCategoryModalVisible] =
     useState(false);
@@ -25,11 +28,12 @@ const ServicePage = () => {
     useState(false);
 
   return (
-    <div id="admin-service-section">
+    <div id="ServiceContainer" ref={serviceRef}>
       <div className="container">
         <div className="admin-service-inner-section">
           <div className="admin-header">Service Page</div>
           <div className="admin-inner-section">
+          <div className="admin-sub-heading">Service Category</div>
             <button
               className="choose-button"
               onClick={() => setServiceCategoryModalVisible(true)}
@@ -48,6 +52,7 @@ const ServicePage = () => {
             <ServiceCategoryTable />
           </div>
           <div className="admin-inner-section">
+          <div className="admin-sub-heading">Services</div>
             <button
               className="choose-button"
               onClick={() => setServiceDataModalVisible(true)}
@@ -63,6 +68,7 @@ const ServicePage = () => {
             <ServiceTable />
           </div>
           <div className="admin-inner-section">
+          <div className="admin-sub-heading">Loan Type</div>
             <button
               className="choose-button"
               onClick={() => setLoanTypeModalVisible(true)}
@@ -78,6 +84,7 @@ const ServicePage = () => {
             <LoanTypeTable />
           </div>
           <div className="admin-inner-section">
+          <div className="admin-sub-heading">Loan Intro</div>
             <button
               className="choose-button"
               onClick={() => setWhatIsModalVisible(true)}
@@ -93,6 +100,7 @@ const ServicePage = () => {
             <LoanIntroTable />
           </div>
           <div className="admin-inner-section">
+          <div className="admin-sub-heading">Loan Factor</div>
             <button
               className="choose-button"
               onClick={() => setloanFactorsModalVisible(true)}
@@ -108,6 +116,7 @@ const ServicePage = () => {
             <LoanFactorTable />
           </div>
           <div className="admin-inner-section">
+          <div className="admin-sub-heading">Loan Eligibility</div>
             <button
               className="choose-button"
               onClick={() => setloanElegibilityModalVisible(true)}

@@ -1,6 +1,24 @@
-import { FETCHING_LANDING_SERVICE_FAILURE, FETCHING_LANDING_SERVICE_SUCCESS, LANDING_SERVICE_SPINNER_STARTS, LANDING_SERVICE_SPINNER_STOPS, START_FETCHING_LANDING_SERVICE, START_FETCHING_LANDING_SERVICE_WITH_SPINNER } from "./landingStore.actionTypes";
 import {
-
+  FETCHING_LANDING_SERVICE_FAILURE,
+  FETCHING_LANDING_SERVICE_SUCCESS,
+  FETCHING_TEAM_FAILURE,
+  FETCHING_TEAM_SUCCESS,
+  FETCHING_TESTIMONIAL_FAILURE,
+  FETCHING_TESTIMONIAL_SUCCESS,
+  LANDING_SERVICE_SPINNER_STARTS,
+  LANDING_SERVICE_SPINNER_STOPS,
+  START_FETCHING_LANDING_SERVICE,
+  START_FETCHING_LANDING_SERVICE_WITH_SPINNER,
+  START_FETCHING_TEAM,
+  START_FETCHING_TEAM_WITH_SPINNER,
+  START_FETCHING_TESTIMONIAL,
+  START_FETCHING_TESTIMONIAL_WITH_SPINNER,
+  TEAM_SPINNER_STARTS,
+  TEAM_SPINNER_STOPS,
+  TESTIMONIAL_SPINNER_STARTS,
+  TESTIMONIAL_SPINNER_STOPS,
+} from "./landingStore.actionTypes";
+import {
   FETCHING_LANDING_ABOUT_FAILURE,
   FETCHING_LANDING_ABOUT_SUCCESS,
   FETCHING_LANDING_HERO_FAILURE,
@@ -50,8 +68,6 @@ export const landingHeroSpinnerStops = () => {
   };
 };
 
-
-
 export const fetchingLandingAboutStarts = () => {
   return {
     type: START_FETCHING_LANDING_ABOUT,
@@ -86,7 +102,6 @@ export const landingAboutSpinnerStops = () => {
     type: LANDING_ABOUT_SPINNER_STOPS,
   };
 };
-
 
 export const fetchingLandingServiceStarts = () => {
   return {
@@ -123,7 +138,72 @@ export const landingServiceSpinnerStops = () => {
   };
 };
 
+export const fetchingTeamStarts = () => {
+  return {
+    type: START_FETCHING_TEAM,
+  };
+};
+export const fetchingTeamWithSpinnerStarts = () => {
+  return {
+    type: START_FETCHING_TEAM_WITH_SPINNER,
+  };
+};
 
+export const fetchingTeamSuccess = (data) => {
+  return {
+    type: FETCHING_TEAM_SUCCESS,
+    payload: data,
+  };
+};
+export const fetchingTeamFailure = (error) => {
+  return {
+    type: FETCHING_TEAM_FAILURE,
+    payload: error,
+  };
+};
 
+export const teamSpinnerStarts = () => {
+  return {
+    type: TEAM_SPINNER_STARTS,
+  };
+};
+export const teamSpinnerStops = () => {
+  return {
+    type: TEAM_SPINNER_STOPS,
+  };
+};
 
+export const fetchingTestimonialStarts = () => {
+  return {
+    type: START_FETCHING_TESTIMONIAL,
+  };
+};
+export const fetchingTestimonialWithSpinnerStarts = () => {
+  return {
+    type: START_FETCHING_TESTIMONIAL_WITH_SPINNER,
+  };
+};
 
+export const fetchingTestimonialSuccess = (data) => {
+  return {
+    type: FETCHING_TESTIMONIAL_SUCCESS,
+    payload: data,
+  };
+};
+export const fetchingTestimonialFailure = (error) => {
+  return {
+    type: FETCHING_TESTIMONIAL_FAILURE,
+    payload: error,
+  };
+};
+
+export const testimonialSpinnerStarts = () => {
+  return {
+    type: TESTIMONIAL_SPINNER_STARTS,
+  };
+};
+export const testimonialSpinnerStops = () => {
+  return {
+    type: TESTIMONIAL_SPINNER_STOPS,
+  };
+};

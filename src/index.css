@@ -2,29 +2,32 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* width: 100vw!important;
-  overflow-x: hidden!important; */
-}
-html{
-  width: 100vw!important;
-  overflow-x: hidden!important;
+  /* width: 100vw!important;*/
+  overflow-x: hidden !important;
+  overflow-Y: scroll !important;
+  height: auto!important;
+
 }
 
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 @font-face {
-  font-family: 'Nexa Bold';
-  src: local('Nexa Bold'), url('./assets/fonts/Nexa\ Bold.otf') format('opentype')
+  font-family: "Nexa Bold";
+  src: local("Nexa Bold"),
+    url("./assets/fonts/Nexa\ Bold.otf") format("opentype");
 }
 @font-face {
-  font-family: 'Nexa Light';
-  src: local('Nexa Light'), url('./assets/fonts/Nexa\ Light.otf') format('opentype')
+  font-family: "Nexa Light";
+  src: local("Nexa Light"),
+    url("./assets/fonts/Nexa\ Light.otf") format("opentype");
 }
 @font-face {
-  font-family: 'Nexa Regular';
-  src: local('Nexa Regular'), url('./assets/fonts/Nexa\ Regular.otf') format('opentype')
+  font-family: "Nexa Regular";
+  src: local("Nexa Regular"),
+    url("./assets/fonts/Nexa\ Regular.otf") format("opentype");
 }
 @font-face {
   font-family: nova-light;
@@ -43,15 +46,12 @@ code {
 
 body {
   font-family: nova-light;
-  /* overflow: hidden!important; */
 }
 
 p {
   font-family: nova-light;
 }
 
-
-
-.tech-container .owl-theme .owl-dots .owl-dot span{
+.tech-container .owl-theme .owl-dots .owl-dot span {
   display: none;
 }

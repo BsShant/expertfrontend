@@ -1,5 +1,7 @@
 import { call, all } from "redux-saga/effects";
+import { aboutMode } from "./aboutReducer/aboutStore.saga";
 import { ServiceCategoryMode } from "./categoryReducer/categoryStore.saga";
+import { footerMode } from "./footerReducer/footerStore.saga";
 import { fundCategoryMode } from "./fundRaiserCategoryReducer/fundRaiserStore.saga";
 import { fundRaiserMode } from "./fundRaiserReducer/fundRaiserStore.saga";
 import { landingMode } from "./landingReducer/landingStore.saga";
@@ -15,6 +17,8 @@ export default function* rootSaga() {
     call(fundRaiserMode),
     call(serviceMode),
     call(productMode),
-    call(loanMode)
+    call(loanMode),
+    call(aboutMode),
+    call(footerMode),
   ]);
 }

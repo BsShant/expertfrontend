@@ -2,6 +2,7 @@ import { message, Table } from "antd";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchingServiceCategoryStarts } from "../../store/categoryReducer/categoryStore.actions";
+import { fetchingFundRaiserStarts } from "../../store/fundRaiserReducer/fundRaiserStore.actions";
 import { server } from "../../utils/fetch";
 import DataInputModal from "../dataInputmodal/DataInputModal";
 import FundRaiserData from "../fundRaiserData/fundRaiserData";
@@ -12,15 +13,15 @@ import "./styles.css";
 const FundRaiserTable = () => {
   let url = `${server}/fundRaiser`;
   const dispatch = useDispatch();
-  const serviceCategory = useSelector(
-    (state) => state.categoryStore.serviceCategory
+  const fundRaiser = useSelector(
+    (state) => state.fundRaiserStore.fundRaiser
   );
   const [fundRaiserEditModalVisible, setFundRaiserEditModalVisible] =
     useState(false);
   const [selectedFundRaiser, setSelectedFundRaiser] = useState({});
   const tableItemEdit = (record) => {
     setSelectedFundRaiser(
-      serviceCategory.find((data) => data.id == record.id)
+      fundRaiser.find((data) => data.id == record.id)
     );
     setFundRaiserEditModalVisible(true);
   };
@@ -34,7 +35,7 @@ const FundRaiserTable = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        dispatch(fetchingServiceCategoryStarts());
+        dispatch(fetchingFundRaiserStarts());
         console.log("Deleteing Fund Raiser Success");
         message.success("Fund Raiser Deleted!");
       })
@@ -98,7 +99,7 @@ const FundRaiserTable = () => {
   ];
   return (
     <div>
-      <Table dataSource={serviceCategory} columns={columns} />
+      <Table dataSource={fundRaiser} columns={columns} />
       <DataInputModal
         setDataModalVisible={setFundRaiserEditModalVisible}
         dataModalVisible={fundRaiserEditModalVisible}

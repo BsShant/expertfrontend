@@ -1,38 +1,77 @@
-import React, { useEffect, useState } from 'react'
-import ProtectedHeader from '../../protectedComponents/header/ProtectedHeader'
-import { AnalyticsDashboard } from 'react-analytics-charts';
+import React, { useEffect, useState } from "react";
+import ProtectedHeader from "../../protectedComponents/header/ProtectedHeader";
+import {
+  AnalyticsDashboard,
+  SessionsByDeviceCategoryChart,
+  SessionsBySourceChart,
+} from "react-analytics-charts";
 // Over ten different commonly used charts are available
-import { SessionsByDateChart, SessionsGeoChart } from 'react-analytics-charts';
-const Dashboard = () => {
+import "./styles.css";
+import { SessionsByDateChart, SessionsGeoChart } from "react-analytics-charts";
 
+const Dashboard = () => {
+  const [myView, setViewId] = React.useState('ga:266911575');
   return (
     <div>
-      <ProtectedHeader />
       <div className="nos">
         <AnalyticsDashboard
-          authOptions={{ clientId: "571088133078-rhvcpp292romvu62i18sekcitk72ta64.apps.googleusercontent.com" }}
+          authOptions={{
+            clientId:
+              "836305785268-kvgn4buc52pdgejr98udrqn3snj2md89.apps.googleusercontent.com",
+          }}
+          viewId={myView}
           renderCharts={(gapi, viewId) => {
             return (
-              <div>
-                <SessionsByDateChart
-                  gapi={gapi}
-                  viewId={viewId}
-                  showPageViews
-                  showUsers
-                />
-                <SessionsGeoChart
-                  gapi={gapi}
-                  viewId={viewId}
-                  showPageViews
-                />
-                ... More charts here ...
+              <div className="row">
+                <div
+                  className="col-lg-12"
+                  style={{
+                    background: "#f2f2f2",
+                    borderRadius: "20px",
+                    marginBottom: "30px",
+                    height: "450px",
+                  }}
+                >
+                  <SessionsGeoChart
+                    style={{ width: "100%" }}
+                    gapi={gapi}
+                    viewId={viewId}
+                    showPageViews
+                    className="geo-chart"
+                  />
+                </div>
+                <div
+                  className="col-lg-12"
+                  style={{
+                    marginBottom: "30px",
+                    background: "#f2f2f2",
+                    borderRadius: "20px",
+                  }}
+                >
+                  <div className="row" style={{ padding: "40px 40px" }}>
+                    <div className="col-md-6">
+                      <SessionsByDeviceCategoryChart
+                        gapi={gapi}
+                        viewId={viewId}
+                        days={28}
+                      />
+                    </div>
+                    <div className="col-md-6">
+                      <SessionsBySourceChart
+                        gapi={gapi}
+                        viewId={viewId}
+                        days={28}
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             );
           }}
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;

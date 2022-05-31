@@ -60,6 +60,9 @@ const categories = [
 const ServicePageMobile = () => {
   const { pathname } = useLocation()
   const dispatch = useDispatch()
+  const serviceCategory = useSelector(
+    (state) => state.categoryStore.serviceCategory
+  );
   const categoryCollapse = useSelector(state => state.categoryStore.categoryCollapse)
   const selectedCategory = useSelector(state => state.categoryStore.selectedCategory)
   const [sliderCollapse, setSliderCollapse] = useState(false)
@@ -81,9 +84,9 @@ const ServicePageMobile = () => {
               </div>
               <div className="service-page-body">
                 <div className="row">
-                  {categories.map(category => {
+                  {serviceCategory.map(category => {
                     return <div className="col-12 col-lg-4 col-md-6 col-sm-6 col-xs-12" style={{ marginBottom: "30px" }}>
-                      <ServiceItemMobile category={category.category} image={category.image} />
+                      <ServiceItemMobile route={category.route} name={category.name} image={category.image} />
                     </div>
                   })}
 

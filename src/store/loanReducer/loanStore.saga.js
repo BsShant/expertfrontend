@@ -69,7 +69,7 @@ export function* startLoanWHatIsFetchWithSpinner() {
 
 export function* loanFactorsFetch() {
   try {
-    let fetchData = yield fetchLoanEligibility();
+    let fetchData = yield fetchLoanFactors();
     yield put(fetchingLoanFactorsSuccess(fetchData.data));
   } catch (error) {
     yield put(fetchingLoanFactorsFailure(error));
@@ -79,7 +79,7 @@ export function* loanFactorsFetch() {
 export function* loanFactorsFetchWithSpinner() {
   try {
     yield put(loanFactorsSpinnerStarts());
-    let fetchData = yield fetchLoanEligibility();
+    let fetchData = yield fetchLoanFactors();
     yield put(fetchingLoanFactorsSuccess(fetchData.data));
     yield put(loanFactorsSpinnerStops());
   } catch (error) {
@@ -100,7 +100,7 @@ export function* startLoanFactorsFetchWithSpinner() {
 
 export function* loanEligibilityFetch() {
   try {
-    let fetchData = yield fetchLoanFactors();
+    let fetchData = yield fetchLoanEligibility();
     yield put(fetchingLoanEligibilitySuccess(fetchData.data));
   } catch (error) {
     yield put(fetchingLoanEligibilityFailure(error));
@@ -110,7 +110,7 @@ export function* loanEligibilityFetch() {
 export function* loanEligibilityFetchWithSpinner() {
   try {
     yield put(loanEligibilitySpinnerStarts());
-    let fetchData = yield fetchLoanFactors();
+    let fetchData = yield fetchLoanEligibility();
     yield put(fetchingLoanEligibilitySuccess(fetchData.data));
     yield put(loanEligibilitySpinnerStops());
   } catch (error) {

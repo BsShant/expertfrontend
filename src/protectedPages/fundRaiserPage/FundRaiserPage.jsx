@@ -4,38 +4,43 @@ import FundRaiserCategoryData from "../../protectedComponents/fundRaiserCategory
 import FundRaiserCategoryTable from "../../protectedComponents/fundRaiserCategoryTable/fundRaiserCategoryTable";
 import FundRaiserData from "../../protectedComponents/fundRaiserData/fundRaiserData";
 import FundRaiserTable from "../../protectedComponents/fundRaiserTable/fundRaiserTable";
+import { useNav } from "../../protectedComponents/UseNav/UseNav";
 
 import { server } from "../../utils/fetch";
 import "./styles.css";
 const FundRaiserPage = () => {
+  const fundRaiserRef = useNav("FundRaiser");
+
   const [FundRaiserModalVisible, setFundRaiserModalVisible] = useState(false);
   const [FundRaiserCategoryModalVisible, setFundRaiserCategoryModalVisible] =
     useState(false);
 
   return (
-    <div id="admin-fund-raiser-section">
+    <div ref={fundRaiserRef} id="FundRaiserContainer">
       <div className="container">
         <div className="admin-fund-raiser-inner-section">
           <div className="admin-header">Fund Raiser Page</div>
           <div className="admin-inner-section">
+            <div className="admin-sub-heading">Fund Raiser Category</div>
             <button
               className="choose-button"
               onClick={() => setFundRaiserCategoryModalVisible(true)}
             >
-              Add Fund Raiser
+              Add Fund Raiser Category
             </button>
             <DataInputModal
               setDataModalVisible={setFundRaiserCategoryModalVisible}
               dataModalVisible={FundRaiserCategoryModalVisible}
             >
               <FundRaiserCategoryData
-                url={`${server}/fundRaiser`}
+                url={`${server}/fundRaiserCategory`}
                 method="POST"
               />
             </DataInputModal>
             <FundRaiserCategoryTable />
           </div>
           <div className="admin-inner-section">
+            <div className="admin-sub-heading">Fund Raiser</div>
             <button
               className="choose-button"
               onClick={() => setFundRaiserModalVisible(true)}

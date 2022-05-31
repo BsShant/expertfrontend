@@ -4,7 +4,7 @@ import AdminModalTextArea from "../adminModalTextArea/AdminModalTextArea";
 import ImageSelect from "../imageSelect/ImageSelect";
 import "antd/dist/antd.css";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchingServiceCategoryStarts } from "../../store/categoryReducer/categoryStore.actions";
+import { fetchingFundRaiserStarts } from "../../store/fundRaiserReducer/fundRaiserStore.actions";
 
 const FundRaiserData = (props) => {
   const { Option } = Select;
@@ -19,9 +19,10 @@ const FundRaiserData = (props) => {
     days: "",
     category: "",
     rank: "",
+    image: "",
   });
-  const serviceCategory = useSelector(
-    (state) => state.categoryStore.serviceCategory
+  const fundRaiserCategory = useSelector(
+    (state) => state.fundCategoryStore.fundRaiserCategory
   );
   const { RangePicker } = DatePicker;
 
@@ -36,6 +37,7 @@ const FundRaiserData = (props) => {
       days: props.updateData ? props.updateData.days : "",
       category: props.updateData ? props.updateData.category : "",
       rank: props.updateData ? props.updateData.rank : "",
+      image: props.updateData ? props.updateData.image : "",
     });
   }, [props.updateData]);
   const addData = () => {
@@ -43,7 +45,6 @@ const FundRaiserData = (props) => {
       !fundRaiserValues.title ||
       !fundRaiserValues.detail ||
       !fundRaiserValues.projected ||
-      !fundRaiserValues.raised ||
       !fundRaiserValues.start ||
       !fundRaiserValues.end ||
       !fundRaiserValues.days ||
@@ -65,7 +66,7 @@ const FundRaiserData = (props) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        dispatch(fetchingServiceCategoryStarts());
+        dispatch(fetchingFundRaiserStarts());
         console.log(`Fund Raiser ${props.updateData ? "Updated" : "Added"}`);
         message.success(
           `Fund Raiser ${props.updateData ? "Updated" : "Added"}!`
@@ -87,14 +88,13 @@ const FundRaiserData = (props) => {
   function onDateChange(s, e) {
     setFundRaiserValues((prev) => ({ ...prev, start: e[0], end: e[1] }));
   }
-  console.log(fundRaiserValues)
   return (
     <div>
       <div className="row">
         <div className="col-md-6">
           <div className="data-heading">Category</div>
           <Select placeholder="Select Category" onChange={onChange}>
-            {serviceCategory.map((category, index) => {
+            {fundRaiserCategory.map((category, index) => {
               return (
                 <Option key={index} value={category.route}>
                   {category.name}
@@ -131,10 +131,10 @@ const FundRaiserData = (props) => {
           />
         </div>
         <div className="col-md-6">
-        <div className="data-heading">Select Start And End Date</div>
+          <div className="data-heading">Select Start And End Date</div>
           <RangePicker onChange={(s, e) => onDateChange(s, e)} />
         </div>
-        
+
         <div className="col-md-6">
           <AdminModalTextArea
             textAreaValue={fundRaiserValues}

@@ -4,15 +4,17 @@ import AdminModalTextArea from "../adminModalTextArea/AdminModalTextArea";
 import ImageSelect from "../imageSelect/ImageSelect";
 import { DownOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchingServiceStarts } from "../../store/serviceReducer/serviceStore.actions";
 
 const ServiceData = (props) => {
+  const dispatch = useDispatch();
   const [serviceValues, setServiceValues] = useState({
     category: "",
     title: "",
     price: "",
     point1: "",
-    point2: "2",
+    point2: "",
     point3: "",
     point4: "",
     point5: "",
@@ -21,15 +23,19 @@ const ServiceData = (props) => {
     thumbnail: "",
     image: "",
     rank: "",
+    loanType: "",
   });
   const { Option } = Select;
   const serviceCategory = useSelector(
     (state) => state.categoryStore.serviceCategory
   );
+  const lonaType = useSelector((state) => state.loanStore.loanType);
   function onChange(value) {
     setServiceValues((prev) => ({ ...prev, category: value }));
   }
-
+  function onChangeLoan(value) {
+    setServiceValues((prev) => ({ ...prev, loanType: value }));
+  }
   useEffect(() => {
     setServiceValues({
       category: props.serviceData ? props.serviceData.category : "",
@@ -85,6 +91,7 @@ const ServiceData = (props) => {
     })
       .then((res) => res.json())
       .then((data) => {
+        dispatch(fetchingServiceStarts());
         console.log(`Service  ${props.serviceData ? "Updated" : "Added"}`);
         message.success(`Service  ${props.serviceData ? "Updated" : "Added"}!`);
         props.setDataModalVisible(false);
@@ -104,7 +111,7 @@ const ServiceData = (props) => {
       <div className="row">
         <div className="col-md-6">
           <div className="data-heading">Category</div>
-          <Select placeholder="Select Category" onChange={onChange}>
+          <Select placeholder="Select Category"  onChange={onChange}>
             {serviceCategory.map((category, index) => {
               return (
                 <Option key={index} value={category.route}>
@@ -116,9 +123,9 @@ const ServiceData = (props) => {
         </div>
         {serviceValues.category === "loan-services" ? (
           <div className="col-md-6">
-            <div className="data-heading">Loan  Type</div>
-            <Select placeholder="Select Loan Type" onChange={onChange}>
-              {serviceCategory.map((category, index) => {
+            <div className="data-heading">Loan Type</div>
+            <Select placeholder="Select Loan Type" defaultValue={serviceValues.loanType}  onChange={onChangeLoan}>
+              {lonaType.map((category, index) => {
                 return (
                   <Option key={index} value={category.route}>
                     {category.name}

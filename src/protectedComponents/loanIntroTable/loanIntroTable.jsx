@@ -1,25 +1,24 @@
 import { message, Table } from "antd";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchingServiceCategoryStarts } from "../../store/categoryReducer/categoryStore.actions";
+import { fetchingLoanWhatIsStarts } from "../../store/loanReducer/loanStore.actions";
 import { server } from "../../utils/fetch";
 import DataInputModal from "../dataInputmodal/DataInputModal";
 import LoanIntroData from "../loanIntroData/loanIntroData";
-import ServiceCategoryData from "../serviceCategoryData/ServiceCategoryData";
 import "./styles.css";
 
 const LoanIntroTable = () => {
   let url = `${server}/loanWhatIs`;
   const dispatch = useDispatch();
-  const serviceCategory = useSelector(
-    (state) => state.categoryStore.serviceCategory
+  const loanWhatIs = useSelector(
+    (state) => state.loanStore.loanWhatIs
   );
   const [loanIntroEditModalVisible, setLoanIntroEditModalVisible] =
     useState(false);
   const [selectedLoanIntro, setSelectedLoanIntro] = useState({});
   const tableItemEdit = (record) => {
     setSelectedLoanIntro(
-      serviceCategory.find((data) => data.id == record.id)
+      loanWhatIs.find((data) => data.id == record.id)
     );
     setLoanIntroEditModalVisible(true);
   };
@@ -33,7 +32,7 @@ const LoanIntroTable = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        dispatch(fetchingServiceCategoryStarts());
+        dispatch(fetchingLoanWhatIsStarts());
         console.log("Deleteing Loan Intro Success");
         message.success("Loan Intro Deleted!");
       })
@@ -60,6 +59,9 @@ const LoanIntroTable = () => {
       title: "Loan Type",
       dataIndex: "loanType",
       key: "loanType",
+      render: (text, record) => (
+        <div className="category-table-name">{text.replaceAll('-', " ")}</div>
+      ),
     },
     {
       title: "Edit",
@@ -90,7 +92,7 @@ const LoanIntroTable = () => {
   ];
   return (
     <div>
-      <Table dataSource={serviceCategory} columns={columns} />
+      <Table dataSource={loanWhatIs} columns={columns} />
       <DataInputModal
         setDataModalVisible={setLoanIntroEditModalVisible}
         dataModalVisible={loanIntroEditModalVisible}

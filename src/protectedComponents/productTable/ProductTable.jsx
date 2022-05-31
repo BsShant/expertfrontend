@@ -2,6 +2,7 @@ import { message, Table } from "antd";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchingServiceCategoryStarts } from "../../store/categoryReducer/categoryStore.actions";
+import { fetchingProductsStarts } from "../../store/productReducer/productStore.actions";
 import { server } from "../../utils/fetch";
 import DataInputModal from "../dataInputmodal/DataInputModal";
 import LoanFactorData from "../loanFactorData/LoanFactorData";
@@ -11,13 +12,13 @@ import "./styles.css";
 const ProductTable = () => {
   let url = `${server}/product`;
   const dispatch = useDispatch();
-  const serviceCategory = useSelector(
-    (state) => state.categoryStore.serviceCategory
+  const products = useSelector(
+    (state) => state.productStore.products
   );
   const [productEditModalVisible, setProductEditModalVisible] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState({});
   const tableItemEdit = (record) => {
-    setSelectedProduct(serviceCategory.find((data) => data.id == record.id));
+    setSelectedProduct(products.find((data) => data.id == record.id));
     setProductEditModalVisible(true);
   };
   const tableItemDelete = (record) => {
@@ -30,7 +31,7 @@ const ProductTable = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        dispatch(fetchingServiceCategoryStarts());
+        dispatch(fetchingProductsStarts());
         console.log("DeleteingProduct Success");
         message.success("Product Deleted!");
       })
@@ -89,7 +90,7 @@ const ProductTable = () => {
   ];
   return (
     <div>
-      <Table dataSource={serviceCategory} columns={columns} />
+      <Table dataSource={products} columns={columns} />
       <DataInputModal
         setDataModalVisible={setProductEditModalVisible}
         dataModalVisible={productEditModalVisible}

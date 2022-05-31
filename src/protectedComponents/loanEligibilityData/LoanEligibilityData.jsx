@@ -4,7 +4,7 @@ import AdminModalTextArea from "../adminModalTextArea/AdminModalTextArea";
 import ImageSelect from "../imageSelect/ImageSelect";
 import "antd/dist/antd.css";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchingServiceCategoryStarts } from "../../store/categoryReducer/categoryStore.actions";
+import { fetchingLoanEligibilityStarts, fetchingLoanEligibilitySuccess } from "../../store/loanReducer/loanStore.actions";
 
 const LoanELigibilityData = (props) => {
   const { Option } = Select;
@@ -17,8 +17,8 @@ const LoanELigibilityData = (props) => {
     point5: "",
     loanType: "",
   });
-  const serviceCategory = useSelector(
-    (state) => state.categoryStore.serviceCategory
+  const loanType = useSelector(
+    (state) => state.loanStore.loanType
   );
 
   useEffect(() => {
@@ -51,7 +51,7 @@ const LoanELigibilityData = (props) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        dispatch(fetchingServiceCategoryStarts());
+        dispatch(fetchingLoanEligibilityStarts());
         console.log(`Loan Eligibility ${props.updateData ? "Updated" : "Added"}`);
         message.success(
           `Loan Eligibility ${props.updateData ? "Updated" : "Added"}!`
@@ -60,7 +60,7 @@ const LoanELigibilityData = (props) => {
       })
       .catch((error) => {
         console.log(
-          `${props.updateData ? "Updating" : "Adding"} Loan Eligibility Failed`
+          `${props.updateData ? "Updating" : "Adding"} Loan Eligibility Failed: `, error
         );
         message.error(
           `${props.updateData ? "Updating" : "Adding"} New Loan Eligibility Failed!`
@@ -76,7 +76,7 @@ const LoanELigibilityData = (props) => {
         <div className="col-md-6">
           <div className="data-heading">Loan Type</div>
           <Select placeholder="Select Loan Type" onChange={onChange}>
-            {serviceCategory.map((category, index) => {
+            {loanType.map((category, index) => {
               return (
                 <Option key={index} value={category.route}>
                   {category.name}
@@ -84,15 +84,6 @@ const LoanELigibilityData = (props) => {
               );
             })}
           </Select>
-        </div>
-        <div className="col-md-6">
-          <AdminModalTextArea
-            textAreaValue={loanEligibilityValues}
-            onTextAreaValueChange={setLoanEligibilityValues}
-            textName="title"
-            name="loanEligibilityTitle"
-            title="Title"
-          />
         </div>
         <div className="col-md-6">
           <AdminModalTextArea

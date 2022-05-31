@@ -5,6 +5,7 @@ import ImageSelect from "../imageSelect/ImageSelect";
 import "antd/dist/antd.css";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchingServiceCategoryStarts } from "../../store/categoryReducer/categoryStore.actions";
+import { fetchingProductsStarts } from "../../store/productReducer/productStore.actions";
 
 const ProductData = (props) => {
   const { Option } = Select;
@@ -16,9 +17,6 @@ const ProductData = (props) => {
     image: "",
     rank: "",
   });
-  const serviceCategory = useSelector(
-    (state) => state.categoryStore.serviceCategory
-  );
 
   useEffect(() => {
     setProductValues({
@@ -51,7 +49,7 @@ const ProductData = (props) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        dispatch(fetchingServiceCategoryStarts());
+        dispatch(fetchingProductsStarts());
         console.log(`Product ${props.updateData ? "Updated" : "Added"}`);
         message.success(`Product ${props.updateData ? "Updated" : "Added"}!`);
         props.setDataModalVisible(false);

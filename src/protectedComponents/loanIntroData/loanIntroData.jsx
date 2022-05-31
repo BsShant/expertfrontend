@@ -5,6 +5,7 @@ import ImageSelect from "../imageSelect/ImageSelect";
 import "antd/dist/antd.css";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchingServiceCategoryStarts } from "../../store/categoryReducer/categoryStore.actions";
+import { fetchingLoanWhatIsStarts } from "../../store/loanReducer/loanStore.actions";
 
 const LoanIntroData = (props) => {
   const { Option } = Select;
@@ -15,8 +16,8 @@ const LoanIntroData = (props) => {
     loanType: "",
     image: "",
   });
-  const serviceCategory = useSelector(
-    (state) => state.categoryStore.serviceCategory
+  const loanType = useSelector(
+    (state) => state.loanStore.loanType
   );
 
   useEffect(() => {
@@ -49,7 +50,7 @@ const LoanIntroData = (props) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        dispatch(fetchingServiceCategoryStarts());
+        dispatch(fetchingLoanWhatIsStarts());
         console.log(
           `Loan Intro ${props.updateData ? "Updated" : "Added"}`
         );
@@ -78,7 +79,7 @@ const LoanIntroData = (props) => {
         <div className="col-md-6">
         <div className="data-heading">Loan Type</div>
           <Select placeholder="Select Loan Type" onChange={onChange}>
-            {serviceCategory.map((category, index) => {
+            {loanType.map((category, index) => {
               return (
                 <Option key={index} value={category.route}>
                   {category.name}

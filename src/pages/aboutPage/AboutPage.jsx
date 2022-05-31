@@ -14,7 +14,7 @@ const AboutPage = () => {
     <>
 
       <div className='about-page-container snap-y'>
-        <Header />
+        {/* <Header /> */}
         <div className="container">
           <div className="about-page-inner-container">
             <div className="row" style={{ height: "100%" }}>
@@ -111,7 +111,7 @@ const AboutPage = () => {
         </div>
       </div> */}
       {/* <Testimonials type="about" naa /> */}
-      <EasyFooter />
+      {/* <EasyFooter /> */}
       {/* <Bottom /> */}
     </>
   )

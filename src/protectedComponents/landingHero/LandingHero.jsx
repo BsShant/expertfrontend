@@ -1,21 +1,32 @@
 import { message } from "antd";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { server } from "../../utils/fetch";
 import AdminTextArea from "../adminTextArea/AdminTextArea";
 import "./styles.css";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchingLandingHeroStarts } from "../../store/landingReducer/landingStore.actions";
 const LandingHero = () => {
   let url = `${server}/landingHero`;
+  const dispatch = useDispatch();
+  const landingHero = useSelector((state) => state.landingStore.landingHero);
   const [landingHeroValues, setLandingHeroValues] = useState({
     heading: "",
-    subHeading: "",
+    subHeading:"",
   });
   const [landingHeroTextEdit, setLandingHeroTextEdit] = useState({
     headingEdit: false,
     subHeadingEdit: false,
   });
-
-  const adminLandingHeadingRef = useRef(null);
-  const adminLandingSubHeadingRef = useRef(null);
+  useEffect(() => {
+    if (landingHero) {
+      setLandingHeroValues({
+        heading: landingHero.heading,
+        subHeading: landingHero.subHeading,
+      });
+    }
+  }, [landingHero]);
+  const landingHeroHeadingRef = useRef(null);
+  const landingHeroSubHeadingRef = useRef(null);
   const updateDatabase = () => {
     fetch(url, {
       method: "PUT",
@@ -26,6 +37,7 @@ const LandingHero = () => {
     })
       .then((res) => res.json())
       .then((data) => {
+        dispatch(fetchingLandingHeroStarts());
         console.log(`Landing Hero Section Updated!`);
         message.success(`Landing Hero Section Updated!`);
       })
@@ -35,19 +47,19 @@ const LandingHero = () => {
       });
   };
   return (
-    <div className="admin-landing-section-hero-container">
+    <div className="admin-box-container">
       <div className="row">
-        <div className="col-md-8">
+        <div className="col-md-12">
           <div className="admin-sub-heading">Hero Section</div>
           <div className="data-container">
             <div className="data-heading">Heading</div>
             <AdminTextArea
-              textAreaRef={adminLandingHeadingRef}
+              textAreaRef={landingHeroHeadingRef}
               setTextEdit={setLandingHeroTextEdit}
               textEdit={landingHeroTextEdit}
-              textEditName="headingEdit"
               textAreaValue={landingHeroValues}
               onTextAreaValueChange={setLandingHeroValues}
+              textEditName="headingEdit"
               textName="heading"
               name="landingHeroHeading"
             />
@@ -56,12 +68,12 @@ const LandingHero = () => {
           <div className="data-container">
             <div className="data-heading">Sub Heading</div>
             <AdminTextArea
-              textAreaRef={adminLandingSubHeadingRef}
+              textAreaRef={landingHeroSubHeadingRef}
               setTextEdit={setLandingHeroTextEdit}
               textEdit={landingHeroTextEdit}
-              textEditName="subHeadingEdit"
               textAreaValue={landingHeroValues}
               onTextAreaValueChange={setLandingHeroValues}
+              textEditName="subHeadingEdit"
               textName="subHeading"
               name="landingHeroSubHeading"
             />

@@ -2,6 +2,7 @@ import { message, Table } from "antd";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchingServiceCategoryStarts } from "../../store/categoryReducer/categoryStore.actions";
+import { fetchingLoanEligibilityStarts } from "../../store/loanReducer/loanStore.actions";
 import { server } from "../../utils/fetch";
 import DataInputModal from "../dataInputmodal/DataInputModal";
 import LoanELigibilityData from "../loanEligibilityData/LoanEligibilityData";
@@ -11,15 +12,15 @@ import "./styles.css";
 const LoanEligibilityTable = () => {
   let url = `${server}/loanEligibility`;
   const dispatch = useDispatch();
-  const serviceCategory = useSelector(
-    (state) => state.categoryStore.serviceCategory
+  const loanEligibility = useSelector(
+    (state) => state.loanStore.loanEligibility
   );
   const [loanEligibilityEditModalVisible, setLoanEligibilityEditModalVisible] =
     useState(false);
   const [selectedLoanEligibility, setSelectedLoanEligibility] = useState({});
   const tableItemEdit = (record) => {
     setSelectedLoanEligibility(
-      serviceCategory.find((data) => data.id == record.id)
+      loanEligibility.find((data) => data.id == record.id)
     );
     setLoanEligibilityEditModalVisible(true);
   };
@@ -33,7 +34,7 @@ const LoanEligibilityTable = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        dispatch(fetchingServiceCategoryStarts());
+        dispatch(fetchingLoanEligibilityStarts());
         console.log("Deleteing Loan Eligibility Success");
         message.success("Loan Eligibility Deleted!");
       })
@@ -102,7 +103,7 @@ const LoanEligibilityTable = () => {
   ];
   return (
     <div>
-      <Table dataSource={serviceCategory} columns={columns} />
+      <Table dataSource={loanEligibility} columns={columns} />
       <DataInputModal
         setDataModalVisible={setLoanEligibilityEditModalVisible}
         dataModalVisible={loanEligibilityEditModalVisible}

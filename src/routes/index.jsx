@@ -22,39 +22,47 @@ import Login from "../pages/login/Login";
 import ServicePageInner from "../pages/servicePageInner/ServicePage";
 import Admin from "../protectedPages/admin/Admin";
 const IndexRoute = () => {
-
   return (
     <>
       <ScrollToTop>
-
         <Routes>
-          <Route element={
-            <PublicLayout>
-              <Outlet />
-            </PublicLayout>
-          }>
+          <Route path="/admin" element={<Admin />} />
+          <Route
+            element={
+              <PublicLayout>
+                <Outlet />
+              </PublicLayout>
+            }
+          >
             <Route path="/our-products" element={<ProductPage />} />
             <Route path="/fund-raiser" element={<FundRaiserPage />} />
             <Route path="/fund-raiser/project-page" element={<ProjectPage />} />
-            <Route path="/our-services/service-page/:category/:title" element={<ServiceInner />} />
+            <Route
+              path="/our-services/service-page/:category/:id/:title"
+              element={<ServiceInner />}
+            />
 
             <Route path="/contact-us" element={<ContactPage />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/our-services/:category" element={<ServicePageInner />} />
+            <Route
+              path="/our-services/:category"
+              element={<ServicePageInner />}
+            />
+            <Route path="/about-us" element={<AboutPage />} />
           </Route>
 
           <Route path="/" element={<LandingPage />} />
-          <Route path="/about-us" element={<AboutPage />} />
-          <Route element={
-            <CategoryLayout>
-              <Outlet />
-            </CategoryLayout>
-          }>
+          <Route
+            element={
+              <CategoryLayout>
+                <Outlet />
+              </CategoryLayout>
+            }
+          >
             <Route path="/our-services" element={<ServicePage />} />
           </Route>
-          
-          <Route path="/admin" element={<Admin />} />
-        </Routes >
+
+        </Routes>
       </ScrollToTop>
     </>
   );

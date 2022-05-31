@@ -4,16 +4,14 @@ import AdminModalTextArea from "../adminModalTextArea/AdminModalTextArea";
 import ImageSelect from "../imageSelect/ImageSelect";
 import "antd/dist/antd.css";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchingServiceCategoryStarts } from "../../store/categoryReducer/categoryStore.actions";
+import { fetchingFundCategoryStarts } from "../../store/fundRaiserCategoryReducer/fundRaiserCategoryStore.actions";
 
 const FundRaiserCategoryData = (props) => {
   const dispatch = useDispatch();
   const [fundRaiserCategoryValues, setFundRaiserCategoryValues] = useState({
     name: "",
   });
-  const serviceCategory = useSelector(
-    (state) => state.categoryStore.serviceCategory
-  );
+
 
   useEffect(() => {
     setFundRaiserCategoryValues({
@@ -37,7 +35,7 @@ const FundRaiserCategoryData = (props) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        dispatch(fetchingServiceCategoryStarts());
+        dispatch(fetchingFundCategoryStarts());
         console.log(
           `Fund Raiser Category ${props.updateData ? "Updated" : "Added"}`
         );

@@ -2,6 +2,7 @@ import { message, Table } from "antd";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchingServiceCategoryStarts } from "../../store/categoryReducer/categoryStore.actions";
+import { fetchingFundCategoryStarts } from "../../store/fundRaiserCategoryReducer/fundRaiserCategoryStore.actions";
 import { server } from "../../utils/fetch";
 import DataInputModal from "../dataInputmodal/DataInputModal";
 import LoanIntroData from "../loanIntroData/loanIntroData";
@@ -9,17 +10,17 @@ import LoanTypeData from "../loanTypeData/LoanTypeData";
 import "./styles.css";
 
 const FundRaiserCategoryTable = () => {
-  let url = `${server}/loanType`;
+  let url = `${server}/fundRaiserCategory`;
   const dispatch = useDispatch();
-  const serviceCategory = useSelector(
-    (state) => state.categoryStore.serviceCategory
+  const fundRaiserCategory = useSelector(
+    (state) => state.fundCategoryStore.fundRaiserCategory
   );
   const [fundRaiserCategoryEditModalVisible, setFundRaiserCategoryEditModalVisible] =
     useState(false);
   const [selectedFunndRaiserCategory, setSelectedFunndRaiserCategory] = useState({});
   const tableItemEdit = (record) => {
     setSelectedFunndRaiserCategory(
-      serviceCategory.find((data) => data.id == record.id)
+      fundRaiserCategory.find((data) => data.id == record.id)
     );
     setFundRaiserCategoryEditModalVisible(true);
   };
@@ -33,7 +34,7 @@ const FundRaiserCategoryTable = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        dispatch(fetchingServiceCategoryStarts());
+        dispatch(fetchingFundCategoryStarts());
         console.log("Deleteing Fund Raiser Category Success");
         message.success("Fund Raiser Category Deleted!");
       })
@@ -80,7 +81,7 @@ const FundRaiserCategoryTable = () => {
   ];
   return (
     <div>
-      <Table dataSource={serviceCategory} columns={columns} />
+      <Table dataSource={fundRaiserCategory} columns={columns} />
       <DataInputModal
         setDataModalVisible={setFundRaiserCategoryEditModalVisible}
         dataModalVisible={fundRaiserCategoryEditModalVisible}

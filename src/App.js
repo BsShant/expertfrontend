@@ -14,6 +14,8 @@ import {
   fetchingLandingAboutWithSpinnerStarts,
   fetchingLandingHeroWithSpinnerStarts,
   fetchingLandingServiceWithSpinnerStarts,
+  fetchingTeamWithSpinnerStarts,
+  fetchingTestimonialWithSpinnerStarts,
 } from "./store/landingReducer/landingStore.actions";
 import { fetchingFundCategoryWithSpinnerStarts } from "./store/fundRaiserCategoryReducer/fundRaiserCategoryStore.actions";
 import { fetchingFundRaiserWithSpinnerStarts } from "./store/fundRaiserReducer/fundRaiserStore.actions";
@@ -28,6 +30,12 @@ import {
   fetchingLoanTypeWithSpinnerStarts,
   fetchingLoanWhatIsWithSpinnerStarts,
 } from "./store/loanReducer/loanStore.actions";
+import { fetchingAboutWithSpinnerStarts } from "./store/aboutReducer/aboutStore.actions";
+import {
+  fetchingFooterAboutWithSpinnerStarts,
+  fetchingFooterContactWithSpinnerStarts,
+  fetchingFooterLinksWithSpinnerStarts,
+} from "./store/footerReducer/footerStore.actions";
 const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -48,6 +56,12 @@ const App = () => {
     dispatch(fetchingLoanFactorsWithSpinnerStarts());
     dispatch(fetchingLoanEligibilityWithSpinnerStarts());
     dispatch(fetchingLoanTypeWithSpinnerStarts());
+    dispatch(fetchingAboutWithSpinnerStarts());
+    dispatch(fetchingTeamWithSpinnerStarts());
+    dispatch(fetchingTestimonialWithSpinnerStarts());
+    dispatch(fetchingFooterAboutWithSpinnerStarts());
+    dispatch(fetchingFooterLinksWithSpinnerStarts());
+    dispatch(fetchingFooterContactWithSpinnerStarts())
   }, []);
   return <IndexRoute />;
 };

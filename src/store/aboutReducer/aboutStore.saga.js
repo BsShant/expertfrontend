@@ -1,6 +1,6 @@
 import { takeLatest, call, put, all } from 'redux-saga/effects';
 import { fetchingAboutFailure, fetchingAboutSuccess, aboutSpinnerStops, aboutSpinnerStarts } from './aboutStore.actions';
-import { fetchAbout } from '../../utils/api-calls/AboutCalls';
+import { fetchAbout } from '../../utils/api-calls/aboutCalls';
 import { START_FETCHING_ABOUT, START_FETCHING_ABOUT_WITH_SPINNER } from './aboutStore.actionTypes';
 
 export function* aboutFetch(){

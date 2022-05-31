@@ -5,12 +5,20 @@ import {
   FETCHING_LANDING_HERO_SUCCESS,
   FETCHING_LANDING_SERVICE_FAILURE,
   FETCHING_LANDING_SERVICE_SUCCESS,
+  FETCHING_TEAM_FAILURE,
+  FETCHING_TEAM_SUCCESS,
+  FETCHING_TESTIMONIAL_FAILURE,
+  FETCHING_TESTIMONIAL_SUCCESS,
   LANDING_ABOUT_SPINNER_STARTS,
   LANDING_ABOUT_SPINNER_STOPS,
   LANDING_HERO_SPINNER_STARTS,
   LANDING_HERO_SPINNER_STOPS,
   LANDING_SERVICE_SPINNER_STARTS,
   LANDING_SERVICE_SPINNER_STOPS,
+  TEAM_SPINNER_STARTS,
+  TEAM_SPINNER_STOPS,
+  TESTIMONIAL_SPINNER_STARTS,
+  TESTIMONIAL_SPINNER_STOPS,
 } from "./landingStore.actionTypes";
 
 const INITIAL_STATE = {
@@ -23,6 +31,12 @@ const INITIAL_STATE = {
   landingService: null,
   landingServiceSpinner: false,
   landingServiceError: null,
+  team: null,
+  teamSpinner: false,
+  teamError: null,
+  testimonial: null,
+  testimonialSpinner: false,
+  testimonialError: null,
 };
 
 export const landingReducer = (state = INITIAL_STATE, action) => {
@@ -90,6 +104,46 @@ export const landingReducer = (state = INITIAL_STATE, action) => {
         landingServiceSpinner: false,
       };
 
+    case FETCHING_TEAM_SUCCESS:
+      return {
+        ...state,
+        team: action.payload,
+      };
+    case FETCHING_TEAM_FAILURE:
+      return {
+        ...state,
+        teamError: action.payload,
+      };
+    case TEAM_SPINNER_STARTS:
+      return {
+        ...state,
+        teamSpinner: true,
+      };
+    case TEAM_SPINNER_STOPS:
+      return {
+        ...state,
+        teamSpinner: false,
+      };
+    case FETCHING_TESTIMONIAL_SUCCESS:
+      return {
+        ...state,
+        testimonial: action.payload,
+      };
+    case FETCHING_TESTIMONIAL_FAILURE:
+      return {
+        ...state,
+        testimonialError: action.payload,
+      };
+    case TESTIMONIAL_SPINNER_STARTS:
+      return {
+        ...state,
+        testimonialSpinner: true,
+      };
+    case TESTIMONIAL_SPINNER_STOPS:
+      return {
+        ...state,
+        testimonialSpinner: false,
+      };
     default:
       return state;
   }

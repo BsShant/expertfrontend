@@ -21,7 +21,6 @@ const AdminTextArea = (props) => {
     <div className="data-box">
       <textarea
         ref={textAreaRef}
-        autoFocus
         value={textAreaValue[textName]}
         onChange={(e) => onTextAreaChange(e)}
         onBlur={() => onTextEditChange(false)}

@@ -5,6 +5,7 @@ import ImageSelect from "../imageSelect/ImageSelect";
 import "antd/dist/antd.css";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchingServiceCategoryStarts } from "../../store/categoryReducer/categoryStore.actions";
+import { fetchingLoanTypeStarts } from "../../store/loanReducer/loanStore.actions";
 
 const LoanTypeData = (props) => {
   const { Option } = Select;
@@ -12,9 +13,7 @@ const LoanTypeData = (props) => {
   const [loanTypeValues, setLoanTypeValues] = useState({
     name: "",
   });
-  const serviceCategory = useSelector(
-    (state) => state.categoryStore.serviceCategory
-  );
+
 
   useEffect(() => {
     setLoanTypeValues({
@@ -38,7 +37,7 @@ const LoanTypeData = (props) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        dispatch(fetchingServiceCategoryStarts());
+        dispatch(fetchingLoanTypeStarts());
         console.log(`Loan Type ${props.updateData ? "Updated" : "Added"}`);
         message.success(`Loan Type ${props.updateData ? "Updated" : "Added"}!`);
         props.setDataModalVisible(false);

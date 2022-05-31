@@ -68,12 +68,12 @@ export const loanReducer = (state = INITIAL_STATE, action) => {
     case LOAN_FACTORS_SPINNER_STARTS:
       return {
         ...state,
-        loanFactors: true,
+        loanFactorsSpinner: true,
       };
     case LOAN_FACTORS_SPINNER_STOPS:
       return {
         ...state,
-        loanFactors: false,
+        loanFactorsSpinner: false,
       };
 
     case FETCHING_LOAN_ELIGIBILITY_SUCCESS:
@@ -100,12 +100,12 @@ export const loanReducer = (state = INITIAL_STATE, action) => {
     case FETCHING_LOAN_TYPE_SUCCESS:
       return {
         ...state,
-        loanEligibility: action.payload,
+        loanType: action.payload,
       };
     case FETCHING_LOAN_TYPE_FAILURE:
       return {
         ...state,
-        loanType: action.payload,
+        loanTypeError: action.payload,
       };
     case LOAN_TYPE_SPINNER_STARTS:
       return {

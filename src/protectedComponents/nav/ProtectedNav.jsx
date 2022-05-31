@@ -1,83 +1,94 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useContext } from "react";
 import "./styles.css";
 import { Menu, DatePicker, Drawer } from "antd";
 import { Link, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { NavContext } from "../NavProvider/NavProvider";
+import Logo from "../../assets/images/logo.png";
+
 const ProtectedNav = (props) => {
+  const navLinks = [
+    {
+      navLinkId: "Dashboard",
+      name: "Dashboard",
+      scrollToId: "DashboardContainer",
+    },
+    ,
+    {
+      navLinkId: "Landing",
+      name: "Landing Page",
+      scrollToId: "LandingContainer",
+    },
+    {
+      navLinkId: "Service",
+      name: "Service Page",
+      scrollToId: "ServiceContainer",
+    },
+    {
+      navLinkId: "Product",
+      name: "Product Page",
+      scrollToId: "ProductContainer",
+    },
+    {
+      navLinkId: "FundRaiser",
+      name: "Fund Raiser Page",
+      scrollToId: "FundRaiserContainer",
+    },
+    {
+      navLinkId: "ContactUs",
+      name: "Contact US Page",
+      scrollToId: "ContactUsContainer",
+    },
+  ];
   const { pathname } = useLocation();
   const dispatch = useDispatch();
-  const [sticky, setSticky] = useState({ isSticky: false, offset: 0 });
   const protectedNavRef = useRef(null);
-  const [current, setCurrent] = useState(
-    pathname.split("/")[1] ? pathname.split("/")[1] : "Home"
-  );
-  useEffect(() => {
-    setSticky({ offset: 0, setSticky: false });
-  }, []);
+  const { activeNavLinkId, setActiveNavLinkId, setAdminSlider, adminSlider } =
+    useContext(NavContext);
   const handleClick = (e) => {
-    setCurrent(e.key);
-  };
-  // handle scroll event
-  const handleScroll = (elTopOffset, elHeight) => {
-    if (window.pageYOffset > elTopOffset + elHeight) {
-      setSticky({ isSticky: true, offset: elHeight });
-    } else {
-      setSticky({ isSticky: false, offset: 0 });
-    }
+    setActiveNavLinkId(e.key);
+    const myNav = navLinks.filter((n) => n.navLinkId === e.key)[0];
+    document.getElementById(myNav.scrollToId).scrollIntoView({
+      behavior: "smooth", // gives an ease-in-out effect to our scroll
+    });
   };
 
   // add/remove scroll event listener
-  useEffect(() => {
-    var header = protectedNavRef.current.getBoundingClientRect();
-    const handleScrollEvent = () => {
-      handleScroll(header.top, header.height);
-    };
-
-    window.addEventListener("scroll", handleScrollEvent);
-
-    return () => {
-      window.removeEventListener("scroll", handleScrollEvent);
-    };
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <div
       ref={protectedNavRef}
       className={`protected-nav-container ${
-        sticky.isSticky ? "protected-nav-fixed" : ""
+        !adminSlider ? "removeSlider" : ""
       }`}
     >
+      <div className="slider-logo">
+        <img src={Logo} alt="logo" />
+      </div>
       <div className="row" style={{ height: "100%" }}>
-        <div className="col-md-10 m-auto">
+        <div className="col-md-12">
           <Menu
-            // inlineCollapsed={false}
             disabledOverflow={true}
             onClick={(e) => handleClick(e)}
-            selectedKeys={[current]}
+            selectedKeys={[activeNavLinkId]}
             mode="horizontal"
           >
-            <Menu.Item key="Dashboard">
-              <a href="#">Dashboard</a>
-            </Menu.Item>
-
-            <Menu.Item key="landing-page">
-              <a href="#admin-landing-section">Landing Page</a>
-            </Menu.Item>
-            <Menu.Item key="service-page">
-              <a href="#admin-service-section">Service Page</a>
-            </Menu.Item>
-            <Menu.Item key="product-page">
-              <a href="#">Product Page</a>
-            </Menu.Item>
-            <Menu.Item key="fund-raiser-page">
-              <a href="#">Fund Raiser Page</a>
-            </Menu.Item>
-            <Menu.Item key="about-us-page">
-              <a href="#">About Us Page</a>
-            </Menu.Item>
-            <Menu.Item key="contact-us-page">
-              <a href="#">Contact Us Page</a>
-            </Menu.Item>
+            {navLinks.map((nav, index) => {
+              return (
+                <Menu.Item
+                  id={nav.navLinkId}
+                  className={
+                    activeNavLinkId === nav.navLinkId
+                      ? "protectedNavActive"
+                      : ""
+                  }
+                  key={nav.navLinkId}
+                >
+                  {nav.name}
+                </Menu.Item>
+              );
+            })}
           </Menu>
         </div>
       </div>

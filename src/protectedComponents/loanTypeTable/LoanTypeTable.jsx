@@ -1,7 +1,7 @@
 import { message, Table } from "antd";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchingServiceCategoryStarts } from "../../store/categoryReducer/categoryStore.actions";
+import { fetchingLoanTypeStarts } from "../../store/loanReducer/loanStore.actions";
 import { server } from "../../utils/fetch";
 import DataInputModal from "../dataInputmodal/DataInputModal";
 import LoanIntroData from "../loanIntroData/loanIntroData";
@@ -11,16 +11,12 @@ import "./styles.css";
 const LoanTypeTable = () => {
   let url = `${server}/loanType`;
   const dispatch = useDispatch();
-  const serviceCategory = useSelector(
-    (state) => state.categoryStore.serviceCategory
-  );
+  const loanType = useSelector((state) => state.loanStore.loanType);
   const [loanTypeEditModalVisible, setLoanTypeEditModalVisible] =
     useState(false);
   const [selectedLoanType, setSelectedLoanType] = useState({});
   const tableItemEdit = (record) => {
-    setSelectedLoanType(
-      serviceCategory.find((data) => data.id == record.id)
-    );
+    setSelectedLoanType(loanType.find((data) => data.id == record.id));
     setLoanTypeEditModalVisible(true);
   };
   const tableItemDelete = (record) => {
@@ -33,7 +29,7 @@ const LoanTypeTable = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        dispatch(fetchingServiceCategoryStarts());
+        dispatch(fetchingLoanTypeStarts());
         console.log("Deleteing Loan Type Success");
         message.success("Loan Type Deleted!");
       })
@@ -55,10 +51,7 @@ const LoanTypeTable = () => {
       title: "Edit",
       key: "edit",
       render: (text, record) => (
-        <button
-          className="table-button"
-          onClick={() => tableItemEdit(record)}
-        >
+        <button className="table-button" onClick={() => tableItemEdit(record)}>
           Edit
         </button>
       ),
@@ -80,16 +73,12 @@ const LoanTypeTable = () => {
   ];
   return (
     <div>
-      <Table dataSource={serviceCategory} columns={columns} />
+      <Table dataSource={loanType} columns={columns} />
       <DataInputModal
         setDataModalVisible={setLoanTypeEditModalVisible}
         dataModalVisible={loanTypeEditModalVisible}
       >
-        <LoanTypeData
-          updateData={selectedLoanType}
-          url={url}
-          method="PUT"
-        />
+        <LoanTypeData updateData={selectedLoanType} url={url} method="PUT" />
       </DataInputModal>
     </div>
   );

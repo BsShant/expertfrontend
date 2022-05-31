@@ -1,49 +1,33 @@
-import React from "react";
-import DemoLine from "../../protectedComponents/demo/DemoLine";
-import DemoLiquid from "../../protectedComponents/demo/DemoWater";
-import ServiceLines from "../../protectedComponents/demo/ServiceLines";
-import VisitorGraph from "../../protectedComponents/demo/VisitorGraph";
-import VisitorsDoughnut from "../../protectedComponents/demo/VisitorsDoughnut";
-import StatsCardsContainer from "../../protectedComponents/statsCardsContainer/StatsCardsContainer";
+import React, { useEffect, useState } from "react";
+import AdminBottom from "../../protectedComponents/adminBottom/AdminBottom";
+import Logo from "../../assets/images/logo.png";
 import AboutPage from "../aboutPage/AboutPage";
 import Dashboard from "../dashboard/Dashboard";
+import FooterPage from "../footerPage/FooterPage";
 import FundRaiserPage from "../fundRaiserPage/FundRaiserPage";
 import LandingPage from "../landingPage/LandingPage";
 import ProductPage from "../productPage/ProductPage";
 import ServicePage from "../servicePage/ServicePage";
 import "./styles.css";
+
+import ProtectedHeader from "../../protectedComponents/header/ProtectedHeader";
+import { NavProvider } from "../../protectedComponents/NavProvider/NavProvider";
+import SmallDashboard from "../SmallDashboard/SmallDashboard";
+import ContactPage from "../contactPage/ContactPage";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ProtectedNav from "../../protectedComponents/nav/ProtectedNav";
+import AdminBody from "../../protectedComponents/adminBody/AdminBody";
 const Admin = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  const [adminSlider, setAdminSlider] = useState(true);
   return (
     <div>
-      <Dashboard />
-      <div className="container">
-        <StatsCardsContainer />
-        <div className="row mt-2">
-          <div className="col-lg-6 service-stats-container">
-            <ServiceLines />
-            <div className="service-stats-heading mt-3">
-              Services Taken During This month
-            </div>
-          </div>
-          <div className="col-lg-6 visitor-stats-container">
-            <VisitorGraph />
-            <div className="visitor-stats-heading mt-3">
-              Visitors This month
-            </div>
-          </div>
-          <div className="col-lg-6 visitor-doughnut-stats-container">
-            <VisitorsDoughnut />
-            <div className="visitor-doughnut-stats-heading">
-              Visitors From Devices
-            </div>
-          </div>
-        </div>
-      </div>
-      <LandingPage />
-      <ServicePage />
-      <ProductPage />
-      <FundRaiserPage />
-      <AboutPage />
+      <NavProvider>
+        <AdminBody />
+      </NavProvider>
     </div>
   );
 };

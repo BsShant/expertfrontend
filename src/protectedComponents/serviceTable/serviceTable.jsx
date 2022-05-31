@@ -1,54 +1,23 @@
 import { message, Table } from "antd";
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { fetchingServiceCategoryStarts } from "../../store/categoryReducer/categoryStore.actions";
+import { fetchingServiceStarts } from "../../store/serviceReducer/serviceStore.actions";
+import store from "../../store/store";
 import { server } from "../../utils/fetch";
 import DataInputModal from "../dataInputmodal/DataInputModal";
 import ServiceData from "../serviceData.jsx/ServiceData";
 import "./styles.css";
-const dataSource = [
-  {
-    id: "1",
-    title: "ATM card",
-    category: "financial-services",
-    price: "Rs 12000",
-    image: "10 Downing Street",
-    thumbnail: "dddd",
-    para1: "dfsfsd",
-    para2: "dsdddd",
-    rank: "3",
-    point1: "ddd",
-    point2: "Dddd",
-    point3: "ddddd",
-    point4: "",
-    point5: "",
-  },
-  {
-    id: "2",
-    title: "Life Insurance",
-    category: "insurance-services",
-    price: "Rs 12000",
-    image: "10 Downing Street",
-    thumbnail: "dddd",
-    rank: "3",
-    para1: "dfsfsd",
-    para2: "dsdddd",
-    point1: "ddd",
-    point2: "Dddd",
-    point3: "ddddd",
-    point4: "",
-    point5: "",
-  },
-];
 
 const ServiceTable = () => {
   let url = `${server}/service`;
   const [serviceDataEditModalVisible, setServiceDataEditModalVisible] =
     useState(false);
   const dispatch = useDispatch();
+  const service = useSelector(state=> state.serviceStore.service)
   const [selectedService, setSelectedService] = useState({});
   const editServiceEdit = (record) => {
-    setSelectedService(dataSource.find((data) => data.id == record.id));
+    setSelectedService(service.find((data) => data.id == record.id));
     setServiceDataEditModalVisible(true);
   };
   const tableItemDelete = (record) => {
@@ -61,8 +30,8 @@ const ServiceTable = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        dispatch(fetchingServiceCategoryStarts());
-        console.log("Deleteing service category success");
+        dispatch(fetchingServiceStarts());
+        console.log("Deleteing service category success:", data);
         message.success("Service Category deleted!");
       })
       .catch((error) => {
@@ -133,7 +102,7 @@ const ServiceTable = () => {
   ];
   return (
     <div>
-      <Table dataSource={dataSource} columns={columns} />
+      <Table dataSource={service} columns={columns} />
       <DataInputModal
         setDataModalVisible={setServiceDataEditModalVisible}
         dataModalVisible={serviceDataEditModalVisible}
